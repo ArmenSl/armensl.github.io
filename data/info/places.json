@@ -1,0 +1,170 @@
+{
+    "adobe": {
+        "logoUrl": "images/places/logo-adobe.png",
+        "faIcon": "fa fa-house-laptop",
+        "locales": {
+            "en": {"name": "Adobe Inc."}
+        }
+    },
+
+    "ouidou": {
+        "logoUrl": "images/places/logo-ouidou.png",
+        "faIcon": "fa-solid fa-building",
+        "locales": {
+            "en": {"name": "Ouidou"}
+        }
+    },
+
+    "paris_saclay": {
+        "logoUrl": "images/places/logo-paris-university.png",
+        "faIcon": "fas fa-university",
+        "locales": {
+            "en": {"name": "University of Paris-Saclay"},
+            "es": {"name": "Universidad de París-Saclay"},
+            "fr": {"name": "Université Paris-Saclay"},
+            "zh": {"name": "巴黎萨克雷大学"}
+        }
+    },
+
+    "apple": {
+        "logoUrl": "images/places/logo-apple.png",
+        "faIcon": "fab fa-apple",
+        "locales": {
+            "en": {"name": "Apple Inc."}
+        }
+    },
+
+    "coursera": {
+        "logoUrl": "images/places/logo-coursera.png",
+        "faIcon": "fa fa-house-laptop",
+        "locales": {
+            "en": {"name": "Coursera"}
+        }
+    },
+
+    "forbes": {
+        "logoUrl": null,
+        "faIcon": "fa-solid fa-newspaper",
+        "locales": {
+            "en": {"name": "Forbes"}
+        }
+    },
+
+    "google": {
+        "logoUrl": null,
+        "faIcon": "fab fa-google",
+        "locales": {
+            "en": {"name": "Google"}
+        }
+    },
+
+    "harvard": {
+        "logoUrl": "images/places/logo-harvard.png",
+        "faIcon": "fas fa-university",
+        "locales": {
+            "en": {"name": "Harvard University"},
+            "es": {"name": "Universidad de Harvard"},
+            "fr": {"name": "Université Harvard"},
+            "zh": {"name": "哈佛大学"}
+        }
+    },
+
+    "paris": {
+        "logoUrl": "images/places/logo-paris-university.png",
+        "faIcon": "fas fa-university",
+        "locales": {
+            "en": {"name": "University of Paris-Saclay"},
+            "es": {"name": "Universidad de París-Saclay"},
+            "fr": {"name": "Université Paris-Saclay"},
+            "zh": {"name": "巴黎萨克雷大学"}
+        }
+    },
+
+    "udacity": {
+        "logoUrl": "images/places/logo-udacity.png",
+        "faIcon": "fa fa-house-laptop",
+        "locales": {
+            "en": {"name": "Pedagogical and Technological University of Colombia"}
+        }
+    },
+
+    "uptc": {
+        "logoUrl": "images/places/logo-uptc.png",
+        "faIcon": "fa-solid fa-building-columns",
+        "locales": {
+            "en": {"name": "Universidad Pedagógica y Tecnológica de Colombia"}
+        }
+    },
+
+    "uniandes": {
+        "logoUrl": "images/places/logo-uniandes.png",
+        "faIcon": "fa-solid fa-building-columns",
+        "locales": {
+            "en": {"name": "Universidad de los Andes"}
+        }
+    },
+
+    "uoc": {
+        "logoUrl": "images/places/logo-uoc.png",
+        "faIcon": "fa-solid fa-building-columns",
+        "locales": {
+            "en": {"name": "Open University of Catalonia"}
+        }
+    },
+
+    "list": {
+        "logoUrl": "images/places/logo-list.png",
+        "faIcon": "fa-solid fa-buildings",
+        "locales": {
+            "en": {"name": "Luxembourg Institute of Science and Technology"}
+        }
+    },
+
+    "uxStudio": {
+        "logoUrl": "images/places/logo-ux-studio.png",
+        "faIcon": "fas fa-paint-brush",
+        "locales": {
+            "en": {"name": "UX Masters Studio"}
+        }
+    },
+
+    "jisbd": {
+        "logoUrl": "images/places/logo-ux-studio.png",
+        "faIcon": "fa-solid fa-person-chalkboard",
+        "locales": {
+            "en": {"name": "Jornadas de Ingeniería del Software y Bases de Datos (JISBD)"}
+        }
+    },
+
+    "ecsa": {
+        "logoUrl": "images/places/logo-ux-studio.png",
+        "faIcon": "fa-solid fa-person-chalkboard",
+        "locales": {
+            "en": {"name": "European Conference on Software Architecture (ECSA)"}
+        }
+    },
+
+    "agilemde": {
+        "logoUrl": "images/places/logo-ux-studio.png",
+        "faIcon": "fa-solid fa-person-chalkboard",
+        "locales": {
+            "en": {"name": "Workshop on Agile MDE"}
+        }
+    },
+
+    "mdenet": {
+        "logoUrl": "images/places/logo-ux-studio.png",
+        "faIcon": "fa-solid fa-person-chalkboard",
+        "locales": {
+            "en": {"name": "MDENetwork"}
+        }
+    },
+
+    "scipy": {
+        "logoUrl": "images/places/logo-ux-studio.png",
+        "faIcon": "fa-solid fa-person-chalkboard",
+        "locales": {
+            "en": {"name": "Latin American Conference on Scientific Python (SciPy)"}
+        }
+    }
+}

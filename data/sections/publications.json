@@ -1,0 +1,98 @@
+{
+    "locales": {
+        "en": {
+            "title": "<span class='text-primary'>Scientific</span> Publications",
+            "description": "Take a look at my list of publications. If you're interested in any of them but can't access it, feel free to reach out to me, I'd be happy to send you a preprint version!"
+        },
+        "es": {
+            "title": "Publicaciones <span class='text-primary'>Científicas</span>",
+            "description": "Echa un vistazo a mi lista de publicaciones. Si te interesa alguna de ellas pero no puedes acceder, no dudes en contactarme, ¡estaré encantado de enviarte una versión preimpresa!"
+        },
+        "fr": {
+            "title": "Publications <span class='text-primary'>Scientifiques</span>",
+            "description": "Jetez un coup d'œil à ma liste de publications. Si l'une d'entre elles vous intéresse mais que vous ne pouvez pas y accéder, n'hésitez pas à me contacter, je serais ravi de vous envoyer une version préimprimée !"
+        },
+        "zh": {
+            "title": "<span class='text-primary'>科学</span> 出版物",
+            "description": "查看我的出版物列表。如果您对其中任何一篇感兴趣但无法访问，请随时联系我，我很乐意为您发送预印本版本！"
+        }
+    },
+
+    "subcategories": [
+        {
+            "id": "publication",
+            "type": "list",
+            "progress": null,
+            "faIcon": "fa fa-file-text",
+            "locales": {
+                "en": {"title": "Publications"},
+                "es": {"title": "Publicaciones"},
+                "fr": {"title": "Publications"},
+                "zh": {"title": "出版物"}
+            }
+        }
+    ],
+
+    "items": {
+        "publication": [
+            {
+                "imageIconUrl": null,
+                "faIcon": null,
+                "value": null,
+                "type": "conference",
+                "year": 2024,
+                "locales": {
+                    "en": {
+                        "title": "Building besser: an open-source low-code platform",
+                        "url": "https://doi.org/10.1007/978-3-031-61007-3_16",
+                        "description": "Exploring Modeling Methods for Systems Analysis and Development Conference, 2024."
+                    },
+                    "es": {
+                        "title": "Construyendo besser: una plataforma de código bajo de código abierto",
+                        "url": "https://doi.org/10.1007/978-3-031-61007-3_16",
+                        "description": "Conferencia de Exploración de Métodos de Modelado para Análisis y Desarrollo de Sistemas, 2024."
+                    },
+                    "fr": {
+                        "title": "Construire besser : une plateforme low-code open source",
+                        "url": "https://doi.org/10.1007/978-3-031-61007-3_16",
+                        "description": "Conférence d'exploration des méthodes de modélisation pour l'analyse et le développement de systèmes, 2024."
+                    },
+                    "zh": {
+                        "title": "构建besser：开源低代码平台",
+                        "url": "https://doi.org/10.1007/978-3-031-61007-3_16",
+                        "description": "系统分析与开发建模方法探索会议，2024年。"
+                    }
+                }
+            },
+            {
+                "imageIconUrl": null,
+                "faIcon": null,
+                "value": null,
+                "type": "conference",
+                "year": 2024,
+                "locales": {
+                    "en": {
+                        "title": "Extending a Low-Code Tool with Multi-cloud Deployment Capabilities",
+                        "url": "https://doi.org/10.1007/978-3-031-71246-3_5",
+                        "description": "European Conference on Software Architecture (ECSA 2024)."
+                    },
+                    "es": {
+                        "title": "Extendiendo una Herramienta de Código Bajo con Capacidades de Despliegue Multi-nube",
+                        "url": "https://doi.org/10.1007/978-3-031-71246-3_5",
+                        "description": "Conferencia Europea sobre Arquitectura de Software (ECSA 2024)."
+                    },
+                    "fr": {
+                        "title": "Extension d'un outil low-code avec des capacités de déploiement multi-cloud",
+                        "url": "https://doi.org/10.1007/978-3-031-71246-3_5",
+                        "description": "Conférence européenne sur l'architecture logicielle (ECSA 2024)."
+                    },
+                    "zh": {
+                        "title": "扩展低代码工具的多云部署能力",
+                        "url": "https://doi.org/10.1007/978-3-031-71246-3_5",
+                        "description": "欧洲软件架构会议 (ECSA 2024)。"
+                    }
+                }
+            }
+        ]
+    }
+}
