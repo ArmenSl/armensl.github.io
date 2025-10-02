@@ -1,0 +1,64 @@
+{
+    "locales": {
+        "en": {
+            "title": "Academic <span class='text-primary'>Achievements</span>",
+            "description": "Recognition of academic excellence and professional accomplishments."
+        },
+
+        "es": {
+            "title": "Logros <span class='text-primary'>Académicos</span>",
+            "description": "Reconocimiento de la excelencia académica y logros profesionales."
+        },
+
+        "fr": {
+            "title": "Réalisations <span class='text-primary'>Académiques</span>",
+            "description": "Reconnaissance de l'excellence académique et des réalisations professionnelles."
+        },
+
+        "zh": {
+            "title": "学术<span class='text-primary'>成就</span>",
+            "description": "对学术卓越和专业成就的认可。"
+        }
+    },
+
+    "subcategories": [
+        {
+            "id": "academic",
+            "faIcon": "fa-solid fa-graduation-cap",
+            "locales": {
+                "en": {"title": "Academic Honors"},
+                "es": {"title": "Honores Académicos"},
+                "fr": {"title": "Honneurs Académiques"},
+                "zh": {"title": "学术荣誉"}
+            }
+        }
+    ],
+
+    "items": {
+        "academic": [
+            {
+                "id": "highest_honor",
+                "place": "@link{places.paris_saclay}",
+                "period": ["2024/07"],
+                "locales": {
+                    "en": {
+                        "title": "Master's Degree with Highest Honor",
+                        "description": "Graduated from the Master's program in Computer Science with the highest academic distinction, specializing in Autonomous Systems."
+                    },
+                    "es": {
+                        "title": "Maestría con Máxima Distinción",
+                        "description": "Graduado del programa de Maestría en Ciencias de la Computación con la máxima distinción académica, especializándose en Sistemas Autónomos."
+                    },
+                    "fr": {
+                        "title": "Master avec les Plus Hauts Honneurs",
+                        "description": "Diplômé du programme de Master en Informatique avec la plus haute distinction académique, spécialisé en Systèmes Autonomes."
+                    },
+                    "zh": {
+                        "title": "最高荣誉硕士学位",
+                        "description": "以最高学术荣誉毕业于计算机科学硕士项目，专攻自主系统。"
+                    }
+                }
+            }
+        ]
+    }
+}

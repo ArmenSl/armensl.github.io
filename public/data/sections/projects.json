@@ -1,0 +1,94 @@
+{
+    "locales": {
+        "en": {
+                         "en": {
+                        "description": "<b>BESSER</b> is a low-modeling low-code open-source platform built on top of our Python-based personal interpretation of a \"Universal Modeling Language\" (yes, heavily inspired and a simplified version of the better known UML, the Unified Modeling Language). As project owner, I lead the development and innovation of this advanced platform for building better smart software faster.",
+                        "tags": ["low-code", "MDE", "code generation", "Python", "UML", "project leadership"]
+                    },   "title": "<span class='text-primary'>Projects</span>",
+            "description": "These are some of the recent projects I have participated in."
+        },
+        "es": {
+            "title": "Mi <span class='text-primary'>Portafolio</span>",
+            "description": "Explora una selección de mis proyectos recientes y trabajos creativos."
+        },
+        "fr": {
+            "title": "Mon <span class='text-primary'>Portfolio</span>",
+            "description": "Découvrez une sélection de mes projets récents et œuvres créatives."
+        },
+        "zh": {
+            "title": "我的<span class='text-primary'>作品集</span>",
+            "description": "浏览我最近的一些项目和创意作品。"
+        }
+    },
+
+    "subcategories": [
+        {
+            "id": "research",
+            "locales": {
+                "en": {"title": "Research"},
+                "es": {"title": "Productividad"},
+                "fr": {"title": "Productivité"},
+                "zh": {"title": "生产力"}
+            }
+        }
+    ],
+
+    "items": {
+        "research": [
+            {
+                "id": "besser",
+                "title": "BESSER",
+                "logoUrl": "images/portfolio/besser.png",
+                "links": [
+                    {"faIcon": "fa-brands fa-github", "href": "https://github.com/BESSER-PEARL/BESSER", "id": "GitHub"},
+                    {"faIcon": "fa fa-book", "href": "https://besser.readthedocs.io/en/latest/index.html", "id": "ReadTheDocs"}
+                ],
+                "locales": {
+                    "en": {
+                        "description": "<b>BESSER</b> is an open source low-code platform built on top of our Python-based personal interpretation of a “Universal Modeling Language” (yes, heavily inspired and a simplified version of the better known UML, the Unified Modeling Language).",
+                        "tags": ["low-code", "MDE", "code generation", "no-code", "research"]
+                    },
+                    "es": {
+                        "description": "<b>BrainPulse</b> es tu aplicación definitiva de productividad, que te ayuda a gestionar tareas, organizar tu horario y aumentar tu concentración. Con su interfaz elegante y moderna, BrainPulse ofrece funciones como listas de tareas, recordatorios, seguimiento de objetivos y métricas de productividad personalizables. Ya seas un estudiante, un profesional o cualquier persona que busque optimizar su tiempo y eficiencia, BrainPulse es tu aplicación indispensable para lograr más sin sacrificar el equilibrio entre el trabajo y la vida personal.",
+                        "tags": ["aplicación", "productividad", "tareas", "concentración"]
+                    },
+                    "fr": {
+                        "description": "<b>BrainPulse</b> est votre application ultime de productivité, vous aidant à gérer les tâches, organiser votre emploi du temps et améliorer votre concentration. Avec son interface élégante et moderne, BrainPulse propose des fonctionnalités telles que des listes de tâches, des rappels, un suivi des objectifs et des mesures de productivité personnalisables. Que vous soyez étudiant, professionnel ou toute personne cherchant à optimiser son temps et son efficacité, BrainPulse est votre application incontournable pour en faire plus tout en maintenant un équilibre entre travail et vie personnelle.",
+                        "tags": ["application", "productivité", "tâches", "concentration"]
+                    },
+                    "zh": {
+                        "description": "<b>BrainPulse</b> 是您的终极生产力应用，可帮助您管理任务，组织日程并增强专注力。凭借其时尚现代的界面，BrainPulse 提供任务列表、提醒、目标跟踪和可定制的生产力指标等功能。无论您是学生、专业人士还是任何希望优化时间和效率的人，BrainPulse 都是您不可或缺的应用程序，助您在保持工作与生活平衡的同时实现更多成就。",
+                        "tags": ["应用", "生产力", "任务", "专注力"]
+                    }
+                }
+            },
+
+            {
+                "id": "climaborough",
+                "title": "CLIMABOROUGH",
+                "logoUrl": "images/portfolio/clima.jpg",
+                "links": [
+                    {"faIcon": "fa fa-globe", "href": "https://climaborough.eu/", "id": "Project Website"}
+                ],
+                "locales": {
+                    "en": {
+                        "description": "<b>CLIMABOROUGH</b> is a European project, co-funded by the European Union and CINEA, with the ambition to bridge the gap between design and implementation of urban innovations, particularly in the face of climatic change. I contribute by leveraging BESSER's capabilities to develop innovative smart dashboards that enable real-time monitoring and analysis of urban data.",
+                        "tags": ["Smart Cities", "Climate Change", "Urban Innovation", "Dashboards", "European Project", "BESSER"]
+                    },
+                    "es": {
+                        "description": "<b>CLIMABOROUGH</b> es un proyecto europeo, cofinanciado por la Unión Europea y CINEA, con la ambición de cerrar la brecha entre el diseño y la implementación de innovaciones urbanas, particularmente frente al cambio climático.",
+                        "tags": ["Ciudades Inteligentes", "Cambio Climático", "Innovación Urbana", "Tableros", "Proyecto Europeo"]
+                    },
+                    "fr": {
+                        "description": "<b>CLIMABOROUGH</b> est un projet européen, cofinancé par l'Union européenne et CINEA, avec l'ambition de combler le fossé entre la conception et la mise en œuvre d'innovations urbaines, particulièrement face au changement climatique.",
+                        "tags": ["Villes Intelligentes", "Changement Climatique", "Innovation Urbaine", "Tableaux de Bord", "Projet Européen"]
+                    },
+                    "zh": {
+                        "description": "<b>CLIMABOROUGH</b> 是一个由欧盟和CINEA共同资助的欧洲项目，旨在弥合城市创新设计与实施之间的差距，特别是在面对气候变化时。",
+                        "tags": ["智慧城市", "气候变化", "城市创新", "仪表板", "欧洲项目"]
+                    }
+                }
+            }
+        ]
+    }
+}

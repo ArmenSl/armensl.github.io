@@ -1,0 +1,75 @@
+{
+    "categories": [
+        {
+            "id": "home",
+            "faIcon": "fa-solid fa-home"
+        },
+
+        {
+            "id": "background",
+            "faIcon": "fa-solid fa-clock"
+        },
+
+        {
+            "id": "showcase",
+            "faIcon": "fa-solid fa-images"
+        },
+
+        {
+            "id": "more",
+            "faIcon": "fa-solid fa-plus"
+        }
+    ],
+
+    "sections": [
+        {
+            "id": "about",
+            "categoryId": "home",
+            "component": "CoverSection",
+            "jsonPath": "data/sections/cover.json",
+            "faIcon": "fa-solid fa-address-card",
+            "cover": true
+        },
+
+        {
+            "id": "education",
+            "categoryId": "background",
+            "component": "TimelineSection",
+            "jsonPath": "data/sections/education.json",
+            "faIcon": "fa-solid fa-graduation-cap"
+        },
+
+        {
+            "id": "experience",
+            "categoryId": "background",
+            "component": "TimelineSection",
+            "jsonPath": "data/sections/experience.json",
+            "faIcon": "fa-solid fa-briefcase"
+        },
+
+        {
+            "id": "publications",
+            "categoryId": "showcase",
+            "component": "InfoSection",
+            "jsonPath": "data/sections/publications.json",
+            "faIcon": "fas fa-book"
+        },
+
+
+        {
+            "id": "projects",
+            "categoryId": "showcase",
+            "component": "GallerySection",
+            "jsonPath": "data/sections/projects.json",
+            "faIcon": "fa-solid fa-folder-open"
+        },
+
+        {
+            "id": "achievements",
+            "categoryId": "showcase",
+            "component": "ThreadsSection",
+            "jsonPath": "data/sections/achievements.json",
+            "faIcon": "fa-solid fa-award"
+        }
+    ]
+}

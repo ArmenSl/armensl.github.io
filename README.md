@@ -1,345 +1,255 @@
-# Dev Portfolio
+# [Vue Resume Template](https://ryanbalieiro.github.io/vue-resume-template/) by Ryan Balieiro
 
-🚀 **[Dev Portfolio V2 has arrived. Meet Devfolio, a modern portfolio + blog template built with GatsbyJS and TailwindCSS](https://github.com/RyanFitzgerald/devfolio)** 🚀
+This theme has a simple and clean layout designed for creating user-friendly resumes or CV landing pages. It's built using Vue 3.0 (Composition API) and Bootstrap 5, presenting a cohesive one-page layout that blends functionality and aesthetics.
 
-This repo contains an easy-to-customize personal dev portfolio template that was created with Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.
+Key features:
+- A handy fixed side navigation bar that lets you easily scroll through the different sections of your resume.
+- Six unique section layouts to showcase your work experience, education, skills, portfolio, and more.
+- An alternative navigation mode designed just for mobile screens.
+- Multi-language translation support included.
+- Using Vite for faster build times and better integration.
 
-To view a live demo, [click here](https://ryanfitzgerald.github.io/devportfolio/).
+## Status
 
-Looking for a blog template? Checkout [DevBlog](https://github.com/RyanFitzgerald/devblog).
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-agency/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-agency.svg)](https://www.npmjs.com/package/startbootstrap-agency)
 
-## Features
+## Preview
 
-* Gulp ready (compiles Sass and minifies JS)
-* Sass ready with lots of commenting
-* Fully responsive
-* Comes with Bootstrap grid system
-* Easy colour changes can be done through simple variable edits
+Check out a live version of the template **[here](https://ryanbalieiro.github.io/vue-resume-template/).**
 
-## Contents
+### 1. Desktop Screenshots
 
-- [Setup and Configuration](#setup-and-configuration)
-    - [Making Edits / Customizing the Template](#making-edits--customizing-the-template)
-    - [Using the Template As Is](#using-the-template-as-is)
-- [Customization and Editing](#customization-and-editing)
-    - [General](#general)
-    - [Images](#images)
-    - [Header Section](#header-section)
-    - [Lead Section](#lead-section)
-    - [About Section](#about-section)
-    - [Experience Section](#experience-section)
-    - [Education Section](#education-section)
-    - [Projects Section](#projects-section)
-    - [Skills Section](#skills-section)
-    - [Contact Section](#contact-section)
-    - [Footer Section](#footer-section)
-    - [Optional Sections](#optional-sections)
-- [Changelog](#changelog)
-- [License](#license)
+![alt desktop](screenshots/desktop-previews.png)
 
-## Setup and Configuration
+### 2. Mobile Screenshots
 
-The setup required can be broken into two types:
-1. If you want to make edits or customize the template
-2. If you just want to add your information as use as is
+![alt mobile](screenshots/mobile-previews.png)
 
-### Making Edits / Customizing the Template
+## Getting Started
 
-To setup, simply fork the repo and run `npm install` in order to get all the Gulp dev dependencies. Next, run `Gulp watch` to compile the Sass and minify the JavaScript. Alternatively, if you don't have Gulp installed globally, you can run the npm script `npm run watch`. Any changes done to the JavaScript (js/scripts.js) or Sass (sass/styles.scss) will be autocompiled and ready to go.
-
-All scripts are within `js/scripts.js` and get minified to `js/scripts.min.js`. All styles are in `sass/styles.scss` and get compiled to `css/styles.css`. Both the minified scripts file and compiled CSS file are what is loaded on the page by default.
-
-At this point, the page is ready to go and you can begin to add your own information and make any needed changes. The sections below  contains a quick breakdown of each of the default sections and how they work.
-
-### Using The Template As Is
-
-If you wish to use the template as is (i.e. how it's seen in the demo), then all that's required is the `css`, `images`, `js`, `libs` folders and the `index.html` file. You would then add your content to `index.html` as needed and you're good to go!
-
-## Customization and Editing
-
-### General
-
-In general, most styles on the page are based off the definitions of variables in the variable section of the style sheet:
-
-```SCSS
-// Define base and accent colors
-$base-color: #3498db;
-$base-color-hover: darken($base-color, 10%);
-
-// Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
-
-// Define border colors
-$border: #dcd9d9;
-
-// Define text colors
-$heading: #374054;
-$text: #74808a;
+1. Clone the repo:
+```
+git clone https://github.com/ryanbalieiro/vue-resume-template
 ```
 
-If you wish to change the general colour scheme of the page for example, simply change the value of `$base-color`.
-
-There is also a number of default CSS classes that can be applied such as `.shadow`, `.shadow-large`, `.btn-rounded-white`, and various others. These can be found under the General Styles section in the style sheet.
-
-### Images
-
-By default, the template comes with a number of images, some of which can be kept and others which act simply as placeholders and should be switched. The template contains the following:
-
-* Main background (images/lead-bg.jpg) - this is the main background image provided via [Unsplash](https://unsplash.com/). This can be kept or changed easily by replacing `images/lead-bg.jpg` with your new background (recommended size of at least 1920x1080).
-* Favicon (/favicon.ico) - this is the favicon used for the page. Similar to the main bg, this can be kept or changed easily by replacing the `favicon.ico` with your new one.
-* Project image - these are the images associated with the projects under the project section. These are simply placeholders and should either be replaced or removed.
-
-### Header Section
-
-The header section can be found within the `<header>` tag and simply contains an unordered list of anchors to different sections of the page. If you add a new section and want to be able to quickly navigate to it from the top, simply add another list element with an anchor that has the href of the ID of the section. Conversely, if you remove a section, don't forget to remove the associated navigation element.
-
-If you wish to add a header link to an external page, simply add the class `no-scroll` to the anchor. For example:
-
-```HTML
-<li>
-    <a href="https://google.com" class="no-scroll">Google</a>
-</li>
+2. Go to the root directory of the project and install all dependencies with npm:
+```
+npm install
 ```
 
-If you wish to have a sticky (fixed) header, you simply need to add a class of `sticky` to the main header. For example, that would be accomplished as follows:
-
-```HTML
-<header class="sticky">
-    <!-- Header content -->
-</header>
+3. Run the project in developer mode:
+```
+npm run dev
 ```
 
-### Lead Section
+4. To temporarily deactivate the preload animation during theme adjustments, go to `public/data/settings.json` and modify the following field:
 
-The Lead section is pretty straightforward, it contains an h1 for your name and an h2 for your title. It also contains a link that can be used to link to your resume should you wish to add it as well.
-
-If you want your resume to automatically download when the button is clicked instead of opening up in another tab (the default behaviour), add the following code (Thanks to jkfran for the suggestion) in the lead:
-
-```HTML
-<a href="path/to/resume.pdf" download="resume.pdf" class="btn-rounded-white">Download Resume</a>
+```
+ "preloaderEnabled": false
 ```
 
-The href attribute points to where your resume is stored and the download attribute is what triggers the download / provides the name the file will be downloaded as when the user clicks the button (In this case, it will download as resume.pdf).
+## Template Customization
 
-### About Section
+### 1. Changing the content
 
-The about section contains a quick about blurb that can be edited by changing the text within the paragraph tags.
+All the app's content, like texts and images, is stored in the `public/` folder. Inside, you’ll find two key directories:
 
-### Experience Section
+- `public/data` ➔ This is where all the data JSON files are stored, containing the full content of the app.
+- `public/images`➔ Here, you’ll find the icons and photos that the app uses.
 
-The experience section creates a vertical timeline with all your relevant experience. The code for the timeline creation can be found within `js/scripts.js` and is an adaptation of [RyanFitzgerald/vertical-timeline](https://github.com/RyanFitzgerald/vertical-timeline).
+You can easily customize the app’s content by updating the data in these two folders to match your preferences.
 
-The default format is as follows:
+### 2. Quickly customizing the colors
 
-```HTML
-<div id="experience-timeline">
-    <div data-date="September 2015 – September 2016">
-        <h3>Employer Name</h3>
-        <h4>Job Title</h4>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-        </p>
-    </div>
-</div>
+Adjusting the theme colors can be done quickly by editing the variables found in `src/scss/_variables.scss`. To illustrate, a variation of the theme featuring shades of green can be created by modifying the following variables:
+
+```scss
+$primary: #13a452; /** changing the 'primary' color to green **/
+$dark: #021307; /** changing the 'dark' color to a dark shade of green **/
+$background-color: #f8fff8; 
 ```
 
-The data attribute `data-date` is what is used to add a date to the associated timeline point. All that is really required is a wrapping div (i.e. `#experience-timeline`) and nested divs to build the timeline. The h3, h4, and p tags are optional and the contents of the div can be styled however you wish.
+Resulting in:
 
-To add an additional section, simply add additional nested divs under the main wrapping div.
+![alt green](screenshots/color-changing-preview.png)
 
-### Education Section
+### 3. Adding and removing languages
 
-The Education is just a series of `.education-block` classes with some details associated with them. By default, it shows school name, date, degree, and some additional details. For example:
+To add or remove languages, open `public/data/settings.json` and modify the `supportedLanguages` field as needed. Use the `default` property to specify the fallback language that should be used if the application doesn't support the user's preferred language.
 
-```HTML
-<div class="education-block">
-    <h3>University of Ottawa</h3>
-    <span class="education-date">Sept 2016 - Sept 2017</span>
-    <h4>Bachelor of Science in Computer Science</h4>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-    </p>
-</div>
+```json
+{
+    "supportedLanguages": [
+        {
+            "name": "English",
+            "id": "en",
+            "flagUrl": "images/flags/en.png",
+            "default": true
+        },
+
+        {
+            "name": "日本語",
+            "id": "ja",
+            "flagUrl": "images/flags/ja.png"
+        }
+    ]
+}
 ```
 
-To add additional section, simply add additional `.education-block` elements.
+The `public/images/flags/` folder already contains a collection of flags for commonly used languages. If you require a specific flag icon that isn't there, you can download it at no cost from this [source](https://www.flaticon.com/packs/countrys-flags).
 
-### Projects Section
+To deactivate support for multiple languages, keep only a single language within the array. This will automatically hide the language picker menu.
 
-The Project section contains a number of `.project` elements that represent each of your projects. By default, it contains a 300x300 image under `.project-image` and relevant project information under `.project-info`. An example is as follows:
+### 4. Adding, removing and reordering sections
 
-```HTML
-<div class="project">
-    <div class="project-image">
-        <img src="images/project.jpg" />
-    </div>
-    <!-- End .project-image -->
+Inside the `public/data/sections.json` file, you will find two arrays: one for sections and the other for categories. Every section should be linked to a corresponding category. These categories are used in grouping sections within the mobile navigation.
 
-    <div class="project-info">
-        <h3>Project Name Here</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-        </p>
-        <a href="#">View Project</a>
-    </div>
-    <!-- End .project-info -->
-</div>
+Adding, removing or reordering the portfolio sections and categories can be achieved by making modifications to these arrays as needed.
+
+For localizing the section and category titles, ensure that the `id` of each section and category has a corresponding translation in `public/data/strings.json`.
+
+*public/data/strings.json*
+```json 
+{
+    "en": {
+        "section1_id": "Section 1 ID",
+        "section2_id": "Section 2 ID",
+        "section3_id": "Section 3 ID"
+    },
+    
+    "ja": {
+        "section1_id": "セクション1 ID",
+        "section2_id": "セクション2 ID",
+        "section3_id": "セクション3 ID"
+    }
+}
 ```
 
-If you want to hide some projects by default, you can throw them in an additional row and add the markup for the "Show More" button. This would be done as follows:
+### 5. Customizing a section
 
-```HTML
-<!-- Projects Above -->
+Each section entry in `public/data/sections.json` comprises the following fields:
 
-<a id="view-more-projects" href="#">View More Projects</a>
-<div id="more-projects" class="row">
-    <div class="project shadow-large">
-        <div class="project-image">
-            <img src="images/project.jpg" />
-        </div>
-        <!-- End .project-image -->
-        <div class="project-info">
-            <h3>Project Name Here</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>
-            <a href="#">View Project</a>
-        </div>
-        <!-- End .project-info -->
-    </div>
-    <!-- End .project -->
-</div>
+```json 
+{
+    "id": "experience",
+    "categoryId": "background",
+    "component": "TimelineSection",
+    "jsonPath": "data/sections/experience.json",
+    "faIcon": "fa-solid fa-briefcase"
+}
 ```
 
-This will add a link that says "View More Projects" under the current projects and when clicked, all projects in the "More-projects" div will be shown. This is optional functionality and isn't provided by default. It is important that you keep the wrapping div ID intact ("#more-projects") as well as the anchor ID ("#view-more-projects"), however the contents of the div and the anchor text itself can be edited however you like.
+- ***id*** ➔ A unique identifier for the section, also used as a key to fetch the section's name within `strings.json`
+- ***categoryId*** ➔ Specifies the category to which the section belongs (used for grouping sections in the mobile navigation).
+- ***component*** ➔ Indicates the Vue component responsible for rendering the section.
+- ***jsonPath*** ➔ A reference pointing to the JSON file containing the section's content.
+- ***faIcon*** ➔ The FontAwesome icon associated with the section.
 
-#### Projects without images
+To modify the content of a section, open and edit its respective JSON file. Keep in mind that each Vue component may require a specific JSON structure. For proper structuring of section JSON files, refer to the existing ones as a guide.
 
-If you do not wish to have a project image associated with a project, you can simply add `no-image` as an additional class to the project. It would look like the following:
+### 6. Localizing fields
 
-```HTML
-<div class="project no-image">
-    <div class="project-info">
-        <h3>Project Name Here</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.
-        </p>
-        <a href="#">View Project</a>
-    </div>
-    <!-- End .project-info -->
-</div>
+To stay in line with the project's guidelines, put the translations for your static texts into the `public/data/strings.json` file. This file acts as a hub for all your global localization needs. For section and component-specific content, create a `locales` field to encapsulate the corresponding translations.
+
+Each localizable object adheres to the following structure:
+
+```
+{
+    "locales": {
+        "en": {
+            "hello": "Hello!",
+            "age: "Age"
+        },
+        
+        "es": {
+            "hello": "Hola!",
+            "age": "Edad"
+        },
+        
+        (...)
+    }
+}
 ```
 
-### Skills Section
+### 7. Adding functionality to the contact form
 
-The Skills section is simply an unordered list that spits out a "Skill Cloud" with all the skills listed. To add / remove skills, simply edit or add list elements, like so:
+Making the contact form functional requires the creation of your own server-side implementation within the `ContactForm.vue` file. Please note that the current template only includes the client-side implementation, accompanied by a simulated delay using a placeholder timeout to mimic the waiting period for requests:
 
-```HTML
-<ul>
-    <li>JavaScript</li>
-    <li>Python</li>
-    <li>Ruby</li>
-    <li>Go</li>
-    <li>Node.js</li>
-</ul>
+
+```js
+const _sendMessage = (values) => {
+    const feedbackView = layout.getFeedbackView()
+    feedbackView.showActivitySpinner(data.getString("sendingMessage") + "...")
+    submitAttempts++
+
+    /** The message sending logic goes here... **/
+    //setTimeout(() => {
+    //    if(submitAttempts % 2 !== 0) {
+    //        _onMessageSent()
+    //    }
+    //    else {
+    //        _onMessageError()
+    //    }
+    //}, 1000)
+    /** ************************************** **/
+}
 ```
 
-### Contact Section
 
-Since the page is static, I opted to use the awesome Formspree to allow for a contact form without the need for anything else. To use it, you must have the page hosted on a server (loading a basic HTML page won't work) where a referrer header is generated. Also, simply add the email to the action. An example is as follows:
+To disable the contact form, open `public/data/settings.json` and set the `contactFormEnabled` flag to false:
 
-```HTML
-<form method="POST" action="https://formspree.io/email@email.com">
-    <input type="hidden" name="_subject" value="Contact request from personal website" />
-    <input type="email" name="_replyto" placeholder="Your email" required>
-    <textarea name="message" placeholder="Your message" required></textarea>
-    <button type="submit">Send</button>
-</form>
 ```
-For more information on configuration of the contact form or dealing with errors, check out [Formspree](https://formspree.io/).
-
-For a quick tutorial about formspree, check out this [tutsplus tutorial](https://webdesign.tutsplus.com/tutorials/quick-tip-add-a-formspree-form-to-your-static-sites--cms-23870) that covers different aspects and features of the form tool.
-
-### Footer Section
-
-The Footer contains an optional copyright where you can place your name as well as an unordered list of all of your social or coding related profiles. By default it contains Github, Stack Overflow, Facebook, Twitter, and Google Plus. You can add or remove them easily and simply use the Font Awesome icon associated with the social profile you wish to use. For a list of all icons, [click here](http://fontawesome.io/icons/).
-
-### Optional Sections
-
-The template comes with an optional section that can be added to the page markup to list things like Certifications, Hobbies, and more (Note: these are not included by default). The markup for the additional optional section is as follows:
-
-```HTML
-<div class="optional-section background-alt">
-    <h2 class="heading">Section Name</h2>
-
-    <div class="optional-section-block">
-        <h3>Some content title</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-        </p>
-        <ul>
-            <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-            <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-            <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-        </ul>
-    </div>
-    <!-- End .optional-section-block -->
-
-</div>
-<!-- End .optional-section -->
+ "contactFormEnabled": false
 ```
 
-You can copy .optional-section-block for each new item you wish you have in the optional section. Also, the background-alt class may need to be removed depending on where the optional section is placed in your layout as this adds the grey background. If you play it at the bottom after "Skills", it can be used as is. Also, by default the border is applied at the top, but this can also be adjusted as needed.
+### 8. Making the sidebar shrinkable
 
-The optional section blocks have styling for h3 (the block title), h4, p, and ul tags by default.
+If you want to give users the option to shrink or expand the sidebar on larger screens, just head over to `public/data/settings.json` and set the `sidebarShrinkingEnabled` flag to true.
 
-## Changelog
+```
+ "sidebarShrinkingEnabled": true
+```
 
-### 1.2.2
+Now, a handy toggle button will appear in the top left corner of the sidebar, letting the user switch between an expanded and compressed view.
 
-* Updated dependencies and gulpfile
+## Building for production
 
-### 1.2.1
+Open the `vite.config.js` file and set the base directory for your application. This setting defines the main path that your website will be hosted under.
 
-* Updated dependencies and gulpfile
-* Added `no-image` optional class for projects without images (see above for usage)
+```js
+export default defineConfig({
+  base: '/vue-resume-template/',
+  plugins: [vue()],
+})
+```
 
-### 1.2.0
+In simple terms, if you consider GitHub hosting the GitHub Pages site for this repo at the URL `https://ryanbalieiro.github.io/vue-resume-template/`, the correct base directory to set is `/vue-resume-template/`.
 
-* Added support for optional "Show More Projects" that hides some projects by default if included
-* Added optional sections to display certifications, languages, etc.
+If you're deploying to Netlify or your own custom domain where your website is located at the root, you can leave the `base` setting as `'/'`.
 
-### 1.1.3
+To compile your project for production, execute:
 
-* Added default favicon to be used or changed
-* Added `sticky` class to make header fixed
-* Updated docs to add image section
+```
+npm run build
+``` 
 
-### 1.1.2
+This command triggers a series of processes that package your code, assets, and other necessary files, ultimately creating a production-ready version of your project. After running the command, you'll find the compiled files within the `dist` folder. This is the folder you should use for deploying your application to a live server or hosting platform.
 
-* Added `no-scroll` class option to header navigation anchor if you want to link to external site
-* Changed contact form input / textarea colours to be based off `$base-color`
-* Changed main background to 100vh so it doesn't overflow if viewport height < 700px
+If you’re deploying to GitHub Pages, make sure to run this custom command after the build process:
 
-### 1.1.1
+```
+npm run deploy
+```
 
-* Made input placeholder text more readable
-* Removed timeline line when no JS
-* Added some basic styling to timeline when no JS
+This step serves as a solution to the problem discussed in detail at https://stackoverflow.com/questions/48521177/404-when-reloading-a-vue-website-published-to-github-pages. This command will create a `404.html` file as a copy of `index.html`, so when users access a secondary route (like `/education` or `/skills`), it will redirect them to the Vue App instead of GitHub's default 404 page.
 
-### 1.1.0
+## About
 
-* Fixed menu toggle on mobile devices
-* Fixed z-index / scrolling issue with mobile menu
-* Mobile menu now closes once a nav element is hit
+This template was created by and is maintained by **[Ryan Balieiro](https://ryanbalieiro.com/)**.
 
-## License
+It's based on the [Bootstrap](https://getbootstrap.com/) framework created by Mark Otto and Jacob Thorton; and the [Vue](https://vuejs.org/) framework created by Evan You.
 
-Completely free (MIT)! See [LICENSE.md](LICENSE.md) for more.
+## Copyright and License
+
+Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE) license, providing complete freedom for utilization. Feel free to enhance and adapt it to suit your needs.

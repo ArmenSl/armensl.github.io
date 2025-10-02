@@ -1,0 +1,100 @@
+{
+    "name": "Armen SULEJMANI",
+    "profilePictureUrl": "images/pictures/avatar.JPG",
+
+    "locales": {
+        "en": {
+            "credits": "Designed by <strong><a class='light' href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
+            "role": "Software Engineer/Research Engineer"
+        },
+
+        "es": {
+            "credits": "Hecho por <strong><a class='light' href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
+            "role": "Designer de UX"
+        },
+
+        "fr": {
+            "credits": "Conçu par <strong><a class='light' href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
+            "role": "Designer UX"
+        },
+
+        "zh": {
+            "credits": "设计：<strong><a class='light' href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
+            "role": "用户体验设计师"
+        }
+    },
+
+    "contact": {
+        "address": {
+            "id": "address",
+            "value": "Belval Esch-sur-Alzette, Luxembourg",
+            "valueShort": "Luxembourg",
+            "faIcon": "fa-solid fa-city",
+            "href": null
+        },
+
+        "email": {
+            "id": "email",
+            "value": "armensulejmani91@gmail.com",
+            "valueShort": "armensulejmani91@gmail.com",
+            "faIcon": "fa-solid fa-envelope",
+            "href": "mailto:armensulejmani91@gmail.com"
+        },
+
+        "facebook": {
+            "id": "facebook",
+            "value": "Jonas Einstein",
+            "valueShort": "J. Einstein",
+            "faIcon": "fa-brands fa-facebook",
+            "href": "https://facebook.com"
+        },
+
+        "github": {
+            "id": "github",
+            "value": "@ArmenSl",
+            "valueShort": "@ArmenSl",
+            "faIcon": "fa-brands fa-github",
+            "href": "https://github.com/ArmenSl"
+        },
+
+        "instagram": {
+            "id": "instagram",
+            "value": "@jonas.einstein.official",
+            "valueShort": "@jonas.einstein.official",
+            "faIcon": "fa-brands fa-instagram",
+            "href": "https://instagram.com"
+        },
+
+        "linkedin": {
+            "id": "linkedin",
+            "value": "@armen-sl",
+            "valueShort": "@armen-sl",
+            "faIcon": "fa-brands fa-linkedin",
+            "href": "https://www.linkedin.com/in/armen-sl/"
+        },
+
+        "g_scholar": {
+            "id": "Google Scholar",
+            "value": "@armen.sulejmani",
+            "valueShort": "@armen.sulejmani",
+            "faIcon": "fa-solid fa-graduation-cap",
+            "href": "https://scholar.google.com/citations?user=qJ95Z8kAAAAJ&hl=en"
+        },
+
+        "dblp": {
+            "id": "DBLP",
+            "value": "@ivan.alfonso",
+            "valueShort": "@ivan.alfonso",
+            "faIcon": "fa-solid fa-circle-nodes",
+            "href": "https://dblp.uni-trier.de/pid/253/6310.html"
+        },
+
+        "phone": {
+            "id": "phone",
+            "value": "+1 (123) 456-7890",
+            "valueShort": "(123) 456-7890",
+            "faIcon": "fa-solid fa-phone",
+            "href": "tel:1234567890"
+        }
+    }
+}

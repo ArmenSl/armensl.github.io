@@ -1,0 +1,134 @@
+{
+    "locales": {
+        "en": {
+            "title": "<span class='text-primary'>Professional</span> Experience",
+            "description": "A look into my work experience and career journey."
+        },
+
+        "es": {
+            "title": "<span class='text-primary'>Experiencia</span> Profesional",
+            "description": "Un vistazo a mi experiencia laboral y trayectoria profesional."
+        },
+
+        "fr": {
+            "title": "Expérience <span class='text-primary'>Professionnelle</span>",
+            "description": "Un aperçu de mon expérience professionnelle et de mon parcours de carrière."
+        },
+
+        "zh": {
+            "title": "<span class='text-primary'>专业</span> 经验",
+            "description": "了解我的工作经验和职业之旅。"
+        }
+    },
+
+    "items": [
+        {
+            "id": "experience_item_4",
+            "place": "@link{places.ouidou}",
+            "period": ["2022/03", "2022/07"],
+            "locales": {
+                "en": {
+                    "title": "Software Engineer Intern",
+                    "description": "Software Development: Implementation of a new application framework. Development of applications, particularly focusing on GIS technologies (ESRI), for the client, the Office National des Forêts (Public establishment responsible for the management of public forests).",
+                    "tags": ["GIS", "ESRI", "Application Framework", "Forest Management", "Software Development"]
+                },
+                "es": {
+                    "title": "Pasante de Ingeniería de Software",
+                    "description": "Desarrollo de Software: Implementación de un nuevo marco de aplicación. Desarrollo de aplicaciones, enfocándose particularmente en tecnologías GIS (ESRI), para el cliente, la Oficina Nacional de Bosques.",
+                    "tags": ["GIS", "ESRI", "Marco de Aplicación", "Gestión Forestal", "Desarrollo de Software"]
+                },
+                "fr": {
+                    "title": "Stagiaire Ingénieur Logiciel",
+                    "description": "Développement Logiciel : Implémentation d'un nouveau framework d'application. Développement d'applications, en se concentrant particulièrement sur les technologies SIG (ESRI), pour le client, l'Office National des Forêts.",
+                    "tags": ["SIG", "ESRI", "Framework d'Application", "Gestion Forestière", "Développement Logiciel"]
+                },
+                "zh": {
+                    "title": "软件工程师实习生",
+                    "description": "软件开发：实施新的应用程序框架。开发应用程序，特别专注于GIS技术(ESRI)，为客户国家森林办公室提供服务。",
+                    "tags": ["GIS", "ESRI", "应用框架", "森林管理", "软件开发"]
+                }
+            }
+        },
+                {
+            "id": "experience_item_3",
+            "place": "@link{places.paris_saclay}",
+            "period": ["2022/09", "2024/02"],
+            "locales": {
+                "en": {
+                    "title": "Research Work - Ibisc Lab",
+                    "description": "Led comprehensive studies in Machine Learning & Deep Learning Interpretability, implementing techniques such as GLocalX to extract local and global rules. Advanced Variational Autoencoder (B-VAE) development focused on enhancing separation of variation factors. Directed outcome prediction projects using advanced ML techniques including Logistic Regression, SVM, Random Forest, and XGBoost. Implemented LTL model checking with tableau-based approach.",
+                    "tags": ["Machine Learning", "Deep Learning", "Interpretability", "B-VAE", "LTL Model Checking", "XGBoost"]
+                },
+                "es": {
+                    "title": "Designer UX Principal",
+                    "description": "Impulsé iniciativas de UX supervisando un equipo de diseñadores, elaborando estrategias de diseño y liderando colaboraciones multifuncionales con gerentes de producto, ingenieros y ejecutivos. Centrado en crear diseños centrados en el usuario que se alinearan con los objetivos comerciales y que dieron como resultado una mayor satisfacción del usuario.",
+                    "tags": ["Sketch", "Adobe XD", "InVision", "Estrategia de Diseño", "Colaboración Multifuncional"]
+                },
+                "fr": {
+                    "title": "Designer UX Principal",
+                    "description": "A piloté les initiatives UX en supervisant une équipe de concepteurs, en élaborant des stratégies de conception et en dirigeant des collaborations interfonctionnelles avec les responsables de produits, les ingénieurs et les cadres. Axé sur la création de designs centrés sur l'utilisateur alignés sur les objectifs commerciaux et aboutissant à une satisfaction accrue des utilisateurs.",
+                    "tags": ["Sketch", "Adobe XD", "InVision", "Stratégie de Conception", "Collaboration Interfonctionnelle"]
+                },
+                "zh": {
+                    "title": "首席用户体验设计师",
+                    "description": "通过监督设计团队、制定设计战略，并与产品经理、工程师和高管共同推动跨职能合作，推动了用户体验的创新。专注于创建符合业务目标的以用户为中心的设计，从而实现了增强的用户满意度。",
+                    "tags": ["Sketch", "Adobe XD", "InVision", "设计战略", "跨职能合作"]
+                }
+            }
+        },
+        {
+            "id": "experience_item_2",
+            "place": "@link{places.list}",
+            "period": ["2024/02", "2024/09"],
+            "locales": {
+                "en": {
+                    "title": "Software Engineer Intern",
+                    "description": "Research and development of the low-code low-modeling BESSER platform, aimed at building better smart software faster, use of GenerativeAI, Low Code, for the automatic generation of APIs and cloud deployment.",
+                    "tags": ["BESSER", "GenerativeAI", "Low Code", "API Generation", "Cloud Deployment"]
+                },
+                "es": {
+                    "title": "Pasante de Ingeniería de Software",
+                    "description": "Investigación y desarrollo de la plataforma BESSER de bajo código y bajo modelado, destinada a construir mejor software inteligente más rápido, uso de IA Generativa, Código Bajo, para la generación automática de APIs y despliegue en la nube.",
+                    "tags": ["BESSER", "IA Generativa", "Código Bajo", "Generación de API", "Despliegue en la Nube"]
+                },
+                "fr": {
+                    "title": "Stagiaire Ingénieur Logiciel",
+                    "description": "Recherche et développement de la plateforme BESSER low-code low-modeling, visant à construire de meilleurs logiciels intelligents plus rapidement, utilisation de l'IA générative, Low Code, pour la génération automatique d'APIs et le déploiement cloud.",
+                    "tags": ["BESSER", "IA Générative", "Low Code", "Génération d'API", "Déploiement Cloud"]
+                },
+                "zh": {
+                    "title": "软件工程师实习生",
+                    "description": "低代码低建模BESSER平台的研究和开发，旨在更快地构建更好的智能软件，使用生成式AI、低代码进行API的自动生成和云部署。",
+                    "tags": ["BESSER", "生成式AI", "低代码", "API生成", "云部署"]
+                }
+            }
+        },
+        {
+            "id": "experience_item_1",
+            "place": "@link{places.list}",
+            "period": ["2024/10", "now"],
+            "locales": {
+                "en": {
+                    "title": "Research Engineer & Software Engineer",
+                    "description": "Leading the development and innovation of the BESSER platform, an advanced low-code/low-modeling solution. As project owner, directing the platform's architectural design, technical roadmap, and integration of cutting-edge technologies. Contributing to the European Project Climaborough by leveraging BESSER's capabilities developing innovative smart dashboards that enable real-time monitoring and analysis of urban data.",
+                    "tags": ["BESSER", "Low-Code", "Project Management", "Smart Dashboards", "Climaborough"]
+                },
+                "es": {
+                    "title": "Ingeniero de Investigación y Propietario del Proyecto",
+                    "description": "Liderando el desarrollo e innovación de la plataforma BESSER, una solución avanzada de bajo código/bajo modelado. Como propietario del proyecto, dirigiendo el diseño arquitectónico de la plataforma, la hoja de ruta técnica y la integración de tecnologías de vanguardia.",
+                    "tags": ["BESSER", "Bajo Código", "Gestión de Proyectos", "Tableros Inteligentes", "Climaborough"]
+                },
+                "fr": {
+                    "title": "Ingénieur de Recherche et Propriétaire de Projet",
+                    "description": "Dirigeant le développement et l'innovation de la plateforme BESSER, une solution avancée low-code/low-modeling. En tant que propriétaire de projet, dirigeant la conception architecturale de la plateforme, la feuille de route technique et l'intégration des technologies de pointe.",
+                    "tags": ["BESSER", "Low-Code", "Gestion de Projet", "Tableaux de Bord Intelligents", "Climaborough"]
+                },
+                "zh": {
+                    "title": "研究工程师兼项目负责人",
+                    "description": "领导BESSER平台的开发和创新，这是一个先进的低代码/低建模解决方案。作为项目负责人，指导平台的架构设计、技术路线图和前沿技术的集成。",
+                    "tags": ["BESSER", "低代码", "项目管理", "智能仪表板", "Climaborough"]
+                }
+            }
+        }
+    ]
+}
