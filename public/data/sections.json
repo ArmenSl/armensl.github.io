@@ -67,7 +67,7 @@
         {
             "id": "achievements",
             "categoryId": "showcase",
-            "component": "ThreadsSection",
+            "component": "TimelineSection",
             "jsonPath": "data/sections/achievements.json",
             "faIcon": "fa-solid fa-award"
         }
