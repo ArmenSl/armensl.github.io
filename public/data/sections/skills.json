@@ -1,0 +1,71 @@
+{
+    "locales": {
+        "en": {
+            "title": "<span class='text-primary'>Technical</span> Skills",
+            "description": "A comprehensive overview of my technical competencies and expertise."
+        },
+        "es": {
+            "title": "<span class='text-primary'>Habilidades</span> Técnicas",
+            "description": "Una visión integral de mis competencias técnicas y experiencia."
+        },
+        "fr": {
+            "title": "<span class='text-primary'>Compétences</span> Techniques",
+            "description": "Un aperçu complet de mes compétences techniques et de mon expertise."
+        },
+        "zh": {
+            "title": "<span class='text-primary'>技术</span> 技能",
+            "description": "我的技术能力和专业知识的全面概述。"
+        }
+    },
+
+    "subcategories": [
+        {
+            "id": "languages",
+            "type": "list",
+            "progress": null,
+            "faIcon": "fa fa-code",
+            "locales": {
+                "en": {"title": "Programming Languages"},
+                "es": {"title": "Lenguajes de Programación"},
+                "fr": {"title": "Langages de Programmation"},
+                "zh": {"title": "编程语言"}
+            }
+        },
+        {
+            "id": "competencies",
+            "type": "list", 
+            "progress": null,
+            "faIcon": "fa fa-cogs",
+            "locales": {
+                "en": {"title": "Core Competencies"},
+                "es": {"title": "Competencias Principales"},
+                "fr": {"title": "Compétences Principales"},
+                "zh": {"title": "核心能力"}
+            }
+        }
+    ],
+
+    "items": {
+        "languages": [
+            "Python", "C", "C++", "Java", "JavaScript", "Node.js", "React", "Go", "C#"
+        ],
+        "competencies": [
+            "Project Ownership & Leadership",
+            "Team Management", 
+            "Machine Learning & Deep Learning",
+            "Software Architecture & Design",
+            "API Development & Integration",
+            "Cloud Computing (AWS, Azure)",
+            "DevOps & CI/CD",
+            "Agile Development",
+            "Database Design & Management",
+            "System Analysis & Design",
+            "Research & Development",
+            "Technical Documentation",
+            "Problem Solving",
+            "Project Management",
+            "Strategic Planning",
+            "Stakeholder Management"
+        ]
+    }
+}

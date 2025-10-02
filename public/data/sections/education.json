@@ -1,0 +1,80 @@
+{
+    "locales": {
+        "en": {
+            "title": "<span class='text-primary'>Educational</span> Background",
+            "description": "A glimpse into my academic trajectory and accomplishments."
+        },
+
+        "es": {
+            "title": "Antecedentes <span class='text-primary'>Educativos</span>",
+            "description": "Un vistazo a mi trayectoria académica y logros."
+        },
+
+        "fr": {
+            "title": "Parcours <span class='text-primary'>Éducatif</span>",
+            "description": "Un aperçu de mon parcours académique et de mes réalisations."
+        },
+
+        "zh": {
+            "title": "<span class='text-primary'>教育</span> 背景",
+            "description": "一瞥我的学术轨迹和成就。"
+        }
+    },
+
+    "items": [
+        {
+            "id": "bachelor_paris_saclay",
+            "place": "@link{places.paris_saclay}",
+            "period": ["2022/07"],
+
+            "locales": {
+                "en": {
+                    "title": "Bachelor of Science in Computer Science",
+                    "description": "Software Design and Systems Intelligence (CILS) specialization. The CILS track offers specialization in software design, equipping students with the ability to design algorithms, applications, and systems that meet specific requirements, and to assess their complexity and validity."
+                },
+
+                "es": {
+                    "title": "Licenciatura en Diseño Gráfico con Énfasis en UX",
+                    "description": "Graduado con una sólida formación en diseño gráfico con especialización en diseño de experiencia de usuario. Adquirió experiencia en narración visual, diseño de interfaz de usuario y pensamiento de diseño colaborativo."
+                },
+
+                "fr": {
+                    "title": "Baccalauréat en Design Graphique avec Accent sur l'UX",
+                    "description": "Diplômé avec une base solide en design graphique tout en se spécialisant dans la conception de l'expérience utilisateur. Acquis une expertise en narration visuelle, en design d'interface utilisateur et en réflexion collaborative sur la conception."
+                },
+
+                "zh": {
+                    "title": "平面设计学士学位，强调 UX",
+                    "description": "毕业于平面设计领域，专攻用户体验设计，掌握了视觉叙事、用户界面设计和协作式设计思维方面的专业知识。"
+                }
+            }
+        },
+                {
+            "id": "master_paris_saclay",
+            "place": "@link{places.paris_saclay}",
+            "period": ["2024/07"],
+
+            "locales": {
+                "en": {
+                    "title": "Master's of Science in Computer Science",
+                    "description": "Graduated with Highest Honor. Autonomous Systems specialization includes modeling, algorithms, programming, and security. Provides theoretical knowledge in AI (multi-agent systems, data analysis, machine learning), and formal methods, leading to a significant initial research project."
+                },
+
+                "es": {
+                    "title": "Certificación en Fundamentos de UX en Línea",
+                    "description": "Inscrito en un programa en línea que abarca conceptos esenciales de UX, incluida la investigación de usuarios, pruebas de usabilidad y arquitectura de la información. Reforzó habilidades en la creación de experiencias digitales intuitivas y amigables para el usuario."
+                },
+
+                "fr": {
+                    "title": "Certification en Fondamentaux de l'UX en Ligne",
+                    "description": "Inscrit à un programme en ligne couvrant les concepts essentiels de l'UX, y compris la recherche utilisateur, les tests de convivialité et l'architecture de l'information. Renforcé les compétences dans la création d'expériences numériques intuitives et conviviales."
+                },
+
+                "zh": {
+                    "title": "UX 基础在线认证",
+                    "description": "参加了一项涵盖基本 UX 概念的在线课程，包括用户研究、可用性测试和信息架构。加强了在创建直观且用户友好的数字体验方面的技能。"
+                }
+            }
+        }
+    ]
+}
