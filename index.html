@@ -690,14 +690,14 @@ footer a:hover { color: var(--accent-1); }
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> See my work</a>
         <a href="files/Armen_Sulejmani_CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
-        <a href="mailto:armensulejmani91@gmail.com" class="btn btn-ghost"><i class="fa-solid fa-envelope"></i> Get in touch</a>
+        <a href="#contact" data-mail data-u="armensulejmani91" data-d="gmail.com" class="btn btn-ghost"><i class="fa-solid fa-envelope"></i> Get in touch</a>
       </div>
       <div class="social-row" aria-label="Social profiles">
         <a href="https://github.com/ArmenSl" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/armen-sl/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://scholar.google.com/citations?user=qJ95Z8kAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
         <a href="https://dblp.uni-trier.de/pid/253/6310.html" target="_blank" rel="noopener" aria-label="DBLP"><i class="fa-solid fa-circle-nodes"></i></a>
-        <a href="mailto:armensulejmani91@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#contact" data-mail data-u="armensulejmani91" data-d="gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </div>
 
@@ -1035,7 +1035,7 @@ footer a:hover { color: var(--accent-1); }
     <div class="contact-card reveal">
       <h2>Let's build something good.</h2>
       <p>Whether it's a research collaboration, an open-source contribution, or just a chat about low-code and AI — my inbox is open.</p>
-      <a class="email" href="mailto:armensulejmani91@gmail.com"><i class="fa-solid fa-envelope"></i> armensulejmani91@gmail.com</a>
+      <a class="email" href="#" data-mail data-u="armensulejmani91" data-d="gmail.com" data-show="1"><i class="fa-solid fa-envelope"></i> <span class="email-text">click to reveal</span></a>
       <div class="social-row" style="justify-content:center; margin-top: 28px;">
         <a href="https://github.com/ArmenSl" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/armen-sl/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -1063,6 +1063,16 @@ footer a:hover { color: var(--accent-1); }
     menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
   }
+
+  // mail obfuscation — assemble at runtime so static scrapers don't see the address
+  document.querySelectorAll('[data-mail]').forEach(a => {
+    const e = a.dataset.u + '@' + a.dataset.d;
+    a.setAttribute('href', 'mailto:' + e);
+    if (a.dataset.show) {
+      const span = a.querySelector('.email-text');
+      if (span) span.textContent = e;
+    }
+  });
 
   // reveal on scroll
   const io = new IntersectionObserver((entries) => {
