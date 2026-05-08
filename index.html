@@ -567,6 +567,16 @@ section { padding: 100px 0; position: relative; }
 }
 .skills-card h3 i { color: var(--accent-1); }
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-block { margin-bottom: 18px; }
+.skill-block:last-child { margin-bottom: 0; }
+.skill-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin-bottom: 10px;
+}
 .chip {
   font-size: 13.5px;
   padding: 7px 13px;
@@ -660,6 +670,7 @@ footer a:hover { color: var(--accent-1); }
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#publications">Publications</a>
+  <a href="#venues">Talks</a>
   <a href="#skills">Skills</a>
   <a href="#contact" class="cta">Contact</a>
   <button class="nav-mobile-toggle" aria-label="Toggle menu" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
@@ -673,12 +684,13 @@ footer a:hover { color: var(--accent-1); }
       <div class="eyebrow"><span class="pulse"></span> Available for collaboration · Luxembourg</div>
       <h1>Hi, I'm Armen — <br/><span class="grad">Research &amp; Software Engineer.</span></h1>
       <p class="role">
-        I build at the intersection of <strong>applied AI</strong>, <strong>model-driven engineering</strong>, and <strong>open-source software</strong>.
+        I build at the intersection of <strong>applied AI</strong>, <strong>AI agents</strong>, <strong>model-driven engineering</strong>, and <strong>open-source software</strong>.
         Currently leading development of <strong>BESSER</strong>, a low-code / low-modeling platform at the
         <strong>Luxembourg Institute of Science &amp; Technology (LIST)</strong>, and contributing to the EU Horizon projects <strong>CLIMABOROUGH</strong> (smart cities) and <strong>6G-TWIN</strong> (AI-driven network digital twins for 6G).
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> See my work</a>
+        <a href="files/Armen_Sulejmani_CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
         <a href="mailto:armensulejmani91@gmail.com" class="btn btn-ghost"><i class="fa-solid fa-envelope"></i> Get in touch</a>
       </div>
       <div class="social-row" aria-label="Social profiles">
@@ -952,36 +964,109 @@ footer a:hover { color: var(--accent-1); }
   </div>
 </section>
 
+<!-- ============ TALKS & VENUES ============ -->
+<section id="venues">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">// 06 — Talks &amp; Venues</span>
+      <h2>Where my work has shown up.</h2>
+      <p>Conferences, workshops, and communities I've published or contributed to.</p>
+    </div>
+
+    <div class="pubs">
+      <div class="pub reveal">
+        <div class="yr">2024</div>
+        <div class="pub-body">
+          <h4>ECSA — European Conference on Software Architecture</h4>
+          <div class="venue">Paper presentation · Multi-cloud deployment capabilities for BESSER</div>
+        </div>
+      </div>
+      <div class="pub reveal">
+        <div class="yr">2024</div>
+        <div class="pub-body">
+          <h4>EMMSAD — Exploring Modeling Methods for Systems Analysis &amp; Development</h4>
+          <div class="venue">Paper presentation · Building BESSER, an open-source low-code platform</div>
+        </div>
+      </div>
+      <div class="pub reveal">
+        <div class="yr">—</div>
+        <div class="pub-body">
+          <h4>MDENet — Model-Driven Engineering Network</h4>
+          <div class="venue">Community contributor — open-source MDE tooling</div>
+        </div>
+      </div>
+      <div class="pub reveal">
+        <div class="yr">—</div>
+        <div class="pub-body">
+          <h4>Workshop on Agile MDE</h4>
+          <div class="venue">BESSER demos &amp; discussion</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SKILLS ============ -->
 <section id="skills">
   <div class="container">
     <div class="section-head reveal">
-      <span class="section-tag">// 06 — Skills</span>
+      <span class="section-tag">// 07 — Skills</span>
       <h2>Toolbelt.</h2>
-      <p>Languages, frameworks, and disciplines I reach for most often.</p>
+      <p>The stack I reach for, the domains I work in, and the languages I speak.</p>
     </div>
 
     <div class="skills-grid">
       <div class="skills-card reveal">
-        <h3><i class="fa-solid fa-code"></i> Languages</h3>
-        <div class="chip-row">
-          <span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span>
-          <span class="chip">Java</span><span class="chip">C / C++</span><span class="chip">C#</span>
-          <span class="chip">Go</span><span class="chip">Node.js</span><span class="chip">React</span>
+        <h3><i class="fa-solid fa-code"></i> Stack</h3>
+        <div class="skill-block">
+          <div class="skill-label">Most used</div>
+          <div class="chip-row">
+            <span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-label">Also work with</div>
+          <div class="chip-row">
+            <span class="chip">Java</span><span class="chip">Go</span><span class="chip">C / C++</span><span class="chip">C#</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-label">Frameworks &amp; Infra</div>
+          <div class="chip-row">
+            <span class="chip">Node.js</span><span class="chip">React</span><span class="chip">Docker</span>
+            <span class="chip">Linux</span><span class="chip">Git</span><span class="chip">AWS</span><span class="chip">Azure</span>
+          </div>
         </div>
       </div>
 
       <div class="skills-card reveal">
-        <h3><i class="fa-solid fa-gears"></i> Engineering &amp; Research</h3>
+        <h3><i class="fa-solid fa-gears"></i> Domains &amp; Research</h3>
         <div class="chip-row">
-          <span class="chip">Machine Learning</span><span class="chip">Deep Learning</span>
-          <span class="chip">Model-Driven Engineering</span><span class="chip">Generative AI</span>
-          <span class="chip">Software Architecture</span><span class="chip">API Design</span>
-          <span class="chip">Cloud (AWS · Azure)</span><span class="chip">DevOps / CI-CD</span>
-          <span class="chip">Agile</span><span class="chip">System Analysis</span>
-          <span class="chip">Project Leadership</span><span class="chip">Team Management</span>
-          <span class="chip">Technical Writing</span>
+          <span class="chip">Model-Driven Engineering</span>
+          <span class="chip">Low-Code Platforms</span>
+          <span class="chip">Generative AI · LLM integration</span>
+          <span class="chip">AI Agents · Agentic systems</span>
+          <span class="chip">Network Digital Twins</span>
+          <span class="chip">Smart-City Systems</span>
+          <span class="chip">Interpretable ML</span>
+          <span class="chip">β-VAE / Disentanglement</span>
+          <span class="chip">Formal Methods · LTL model checking</span>
+          <span class="chip">Multi-cloud Architecture</span>
+          <span class="chip">API Design</span>
+          <span class="chip">Open-source maintenance</span>
+          <span class="chip">Research-grade software engineering</span>
+          <span class="chip">Technical writing</span>
         </div>
+      </div>
+    </div>
+
+    <div class="skills-card reveal" style="margin-top: 22px;">
+      <h3><i class="fa-solid fa-language"></i> Languages I speak</h3>
+      <div class="chip-row">
+        <span class="chip">French</span>
+        <span class="chip">English</span>
+        <span class="chip">Serbo-Croatian</span>
+        <span class="chip">Luxembourgish</span>
       </div>
     </div>
   </div>
