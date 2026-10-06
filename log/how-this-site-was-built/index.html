@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="A model, an agent and a few thousand blocks: how I rebuilt my homepage around the way I build software." />
+<meta name="author" content="Armen Sulejmani" />
+<meta name="theme-color" content="#0a0f1e" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How this site was built — Armen Sulejmani" />
+<meta property="og:description" content="A model, an agent and a few thousand blocks: how I rebuilt my homepage around the way I build software." />
+<meta property="og:image" content="https://armen-sulejmani.com/images/pictures/avatar.JPG" />
+<meta property="og:url" content="https://armen-sulejmani.com/log/how-this-site-was-built/" />
+<meta property="article:published_time" content="2026-10-06" />
+<link rel="canonical" href="https://armen-sulejmani.com/log/how-this-site-was-built/" />
+
+<title>How this site was built — Armen Sulejmani</title>
+
+<link rel="icon" type="image/svg+xml" href="../../images/icons/favicon.svg" />
+<link rel="alternate icon" type="image/x-icon" href="../../images/icons/ia.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="../../assets/css/site.css" />
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="../../assets/js/site.js" defer></script>
+</head>
+
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a href="../../" class="brand" aria-label="Armen Sulejmani, home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      armen
+    </a>
+    <div class="nav-links">
+      <a href="../../#projects">Projects</a>
+      <a href="../../#about">About</a>
+      <a href="../../#history">History</a>
+      <a href="../" aria-current="page">Log</a>
+      <a href="../../#contact">Contact</a>
+    </div>
+    <button class="icon-btn theme-btn" data-theme-toggle aria-label="Toggle light and dark theme"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+    <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<main>
+<article class="post">
+  <div class="page-head" style="padding-bottom: 0;">
+    <a class="post-back" href="../">← log</a>
+    <div class="post-meta"><time datetime="2026-10-06">Oct 6, 2026</time><span class="dot" aria-hidden="true"></span><span>5 min read</span></div>
+    <h1>How this site was built</h1>
+    <p class="dek">A model, an agent and a few thousand blocks: rebuilding my homepage around the way I build software.</p>
+  </div>
+
+  <p>
+    The old version of this site was fine. Dark background, a gradient, some cards, a timeline. It looked like a lot of
+    developer homepages, because it was one. Then I read Samuel Rizzon's write-up of
+    <a href="https://www.samuelrizzon.dev/log/how-this-site-was-built" target="_blank" rel="noopener">how he rebuilt his site</a>,
+    and sent Claude two links and one sentence: <em>"I want to update my webpage with something like this."</em>
+  </p>
+
+  <h2>Copying the right thing</h2>
+  <p>
+    His site is made of pixel blocks: the hero, the portrait, the little details. It's tempting to take the blocks.
+    But the blocks aren't the idea. They're <strong>his</strong>: they come from Git City, his project that turns GitHub
+    profiles into pixel cities. Copy them and you get his site with your name on it.
+  </p>
+  <p>So the real question was: what's mine?</p>
+
+  <h2>Three candidates</h2>
+  <p>Claude came back with three options:</p>
+  <ul>
+    <li><strong>The site as a model.</strong> I lead <a href="https://github.com/BESSER-PEARL/BESSER" target="_blank" rel="noopener">BESSER</a>, a low-code platform where you draw a model and generators produce the code. The homepage could be a UML class diagram of me that generates the real page.</li>
+    <li><strong>An agent at work.</strong> A lot of my current work is about AI agents. The page could build itself like an agent's trace: a plan, then steps, then output.</li>
+    <li><strong>Pixel blocks.</strong> The closest to Samuel's look.</li>
+  </ul>
+
+  <div class="choice" id="choice">
+    <div class="choice-q">// your call. which would you pick?</div>
+    <div class="choice-opts">
+      <button type="button" style="--c: var(--model)" aria-pressed="false">model</button>
+      <button type="button" style="--c: var(--agent)" aria-pressed="false">agent</button>
+      <button type="button" style="--c: var(--out)" aria-pressed="false">blocks</button>
+    </div>
+    <p class="choice-a" hidden>Good pick. I couldn't choose, so the site uses all three.</p>
+  </div>
+
+  <p>
+    It turned out they weren't three ideas. They're one pipeline, the one I work on every day:
+    <strong>a model goes in, an agent does the work, something gets built.</strong>
+  </p>
+
+  <figure>
+    <div class="fig">
+      <svg class="pipe" viewBox="0 0 600 120" role="img" aria-labelledby="pipeT">
+        <title id="pipeT">Pipeline: model (armen.buml) goes to an agent (besser generate), which outputs blocks.</title>
+        <rect class="m" x="6" y="16" width="160" height="88" rx="4" />
+        <rect class="m-f" x="20" y="30" width="8" height="8" />
+        <text x="36" y="38">model</text>
+        <text class="t-sm" x="20" y="64">armen.buml</text>
+        <text class="t-sm" x="20" y="84">class Armen {…}</text>
+
+        <path class="arr" d="M170 60 H 214" /><polygon class="arr-h" points="220,60 212,55 212,65" />
+
+        <rect class="a" x="222" y="16" width="160" height="88" rx="4" />
+        <rect class="a-f" x="236" y="30" width="8" height="8" />
+        <text x="252" y="38">agent</text>
+        <text class="t-sm" x="236" y="64">✓ load · resolve</text>
+        <text class="t-sm" x="236" y="84">⟳ generate</text>
+
+        <path class="arr" d="M386 60 H 430" /><polygon class="arr-h" points="436,60 428,55 428,65" />
+
+        <rect class="o" x="438" y="16" width="156" height="88" rx="4" />
+        <rect class="o-f" x="452" y="30" width="8" height="8" />
+        <text x="468" y="38">output</text>
+        <g class="o-f">
+          <rect x="452" y="56" width="9" height="9" /><rect x="463" y="56" width="9" height="9" /><rect x="474" y="56" width="9" height="9" />
+          <rect x="452" y="67" width="9" height="9" /><rect x="474" y="67" width="9" height="9" /><rect x="496" y="67" width="9" height="9" opacity="0.6" />
+          <rect x="452" y="78" width="9" height="9" /><rect x="463" y="78" width="9" height="9" /><rect x="474" y="78" width="9" height="9" /><rect x="520" y="50" width="9" height="9" opacity="0.35" />
+        </g>
+      </svg>
+    </div>
+    <figcaption>Each layer gets one colour, and keeps it everywhere on the site.</figcaption>
+  </figure>
+
+  <h2>Model, agent, blocks</h2>
+  <p>
+    <strong>Blue is the model.</strong> When the homepage loads, a class diagram draws itself: <code>class Armen</code>, with
+    attributes (role, base, languages) and operations, associated with <code>Agent</code> and <code>BESSER</code>.
+  </p>
+  <p>
+    <strong>Green is the agent.</strong> Under the diagram, a trace runs <code>besser generate armen.buml --agent</code> and
+    reports each step as it works through the model.
+  </p>
+  <p>
+    <strong>Amber is the output.</strong> When the trace reaches <em>generate</em>, my name is emitted from the workbench as blocks.
+    They come from real font pixels: the text is drawn off-screen, read back on a grid, and every filled cell becomes a block
+    that flies to its place. The trace then reports how many blocks it placed. That number is counted at runtime, not typed in.
+  </p>
+  <blockquote>The name is made of blocks. Hover it and they lean away from your cursor. Click it and they scatter, then reassemble.</blockquote>
+  <p>
+    <code>Esc</code> skips the intro. If your system asks for reduced motion, you get the final frame straight away.
+  </p>
+
+  <h2>Resolution as a reward</h2>
+  <p>
+    Project covers start as coarse blocks and render on hover, stepping up through a few resolutions before the real image
+    fades in. The two projects without a cover got pixel-art sprites instead: an antenna for 6G-TWIN and a decision tree
+    for the interpretable-ML work.
+  </p>
+  <p>
+    The About section finishes the model joke. The class is in the hero; About is an instance of it,
+    <code>armen : Engineer</code>, with real values filled in and an RPG-style special move.
+  </p>
+
+  <h2>A terminal instead of a form</h2>
+  <p>
+    The site is static, with no backend, so the contact section is a small terminal. <code>help</code> lists the commands.
+    <code>note &lt;message&gt;</code> opens your mail client with the message filled in. My address is assembled in
+    JavaScript so simple scrapers don't pick it up.
+  </p>
+  <p>Some commands aren't listed in <code>help</code>.</p>
+
+  <h2>Secrets</h2>
+  <p>
+    There are eight. The counter in the footer keeps score, and opening it shows a hint for each one you haven't found yet.
+    Progress is saved in your own browser and never leaves it.
+  </p>
+
+  <h2>Stack</h2>
+  <p>
+    No framework, no build step. Plain HTML pages, two stylesheets and two scripts, served by GitHub Pages.
+    Geist and Geist Mono for type, Font Awesome for icons. The diagram is hand-written SVG and the blocks are drawn on a canvas.
+  </p>
+
+  <h2>Who did what</h2>
+  <p>
+    I made the calls: the scope, the metaphor and what to keep. Claude Code (Claude Opus 5.5) wrote the code and drafted this post.
+    It feels right for a page about generating things from a model to be generated too.
+  </p>
+
+  <h2>Credit</h2>
+  <p>
+    The idea of picking one metaphor and carrying it all the way through comes from Samuel Rizzon's
+    <a href="https://www.samuelrizzon.dev/log/how-this-site-was-built" target="_blank" rel="noopener">How this site was built</a>.
+    Go read it.
+  </p>
+
+  <div class="post-end">
+    <a href="../">← all entries</a>
+    <a href="../../">back to the generated page →</a>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-left">
+      <span>Modeled by Armen, generated by an agent, built block by block. © <span data-year></span></span>
+      <button class="last-block" aria-label="The last block"></button>
+    </div>
+    <div class="secrets-wrap">
+      <button class="secrets-btn" aria-expanded="false" aria-haspopup="true">secrets <b><span data-secret-count>0</span>/<span data-secret-total>8</span></b></button>
+      <div class="secrets-pop" role="dialog" aria-label="Secrets">
+        <h4>secrets</h4>
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // "your call" block
+  (function () {
+    const box = document.getElementById('choice');
+    const answer = box.querySelector('.choice-a');
+    box.querySelectorAll('.choice-opts button').forEach(b => b.addEventListener('click', () => {
+      box.querySelectorAll('.choice-opts button').forEach(x => x.setAttribute('aria-pressed', x === b));
+      answer.hidden = false;
+    }));
+  })();
+</script>
+</body>
+</html>
