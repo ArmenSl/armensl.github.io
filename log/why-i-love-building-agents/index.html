@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Software that doesn&#x27;t just answer, it acts. And in BESSER, an agent is just another model." />
+<meta name="author" content="Armen Sulejmani" />
+<meta name="theme-color" content="#0a0f1e" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Why I love building agents — Armen Sulejmani" />
+<meta property="og:description" content="Software that doesn&#x27;t just answer, it acts. And in BESSER, an agent is just another model." />
+<meta property="og:image" content="https://armen-sulejmani.com/images/pictures/avatar.JPG" />
+<meta property="og:url" content="https://armen-sulejmani.com/log/why-i-love-building-agents/" />
+<meta property="article:published_time" content="2026-10-06" />
+<link rel="canonical" href="https://armen-sulejmani.com/log/why-i-love-building-agents/" />
+
+<title>Why I love building agents — Armen Sulejmani</title>
+
+<link rel="icon" type="image/svg+xml" href="../../images/icons/favicon.svg" />
+<link rel="alternate icon" type="image/x-icon" href="../../images/icons/ia.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="../../assets/css/site.css" />
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="../../assets/js/site.js" defer></script>
+</head>
+
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a href="../../" class="brand" aria-label="Armen Sulejmani, home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      armen
+    </a>
+    <div class="nav-links">
+      <a href="../../#projects">Projects</a>
+      <a href="../../#about">About</a>
+      <a href="../../#history">History</a>
+      <a href="../" aria-current="page">Log</a>
+      <a href="../../#contact">Contact</a>
+    </div>
+    <button class="icon-btn theme-btn" data-theme-toggle aria-label="Toggle light and dark theme"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+    <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<main>
+<article class="post">
+  <div class="page-head" style="padding-bottom: 0;">
+    <a class="post-back" href="../">← log</a>
+    <div class="post-meta"><time datetime="2026-10-06">Oct 6, 2026</time><span class="dot" aria-hidden="true"></span><span>3 min read</span></div>
+    <h1>Why I love building agents</h1>
+    <p class="dek">Software that doesn&#x27;t just answer, it acts. And in BESSER, an agent is just another model.</p>
+  </div>
+
+  <p>
+    A chatbot answers. An agent <strong>acts</strong>: it plans, picks a tool, uses it, checks the result and keeps going until the
+    task is done. That shift, from software that talks to software that gets things done, is why I keep building them.
+  </p>
+
+  <h2>It started with impatience</h2>
+  <p>
+    My first serious agent was for me. Working on BESSER, I needed example models all the time, for demos, tests and documentation,
+    and drawing each one by hand was slow. I wanted to describe a model and have it appear. So I built an agent that could do it.
+  </p>
+  <p>That agent kept growing. Today it's the modeling assistant inside the BESSER web editor.</p>
+
+  <h2>The modeling agent today</h2>
+  <p>
+    Open the <a href="https://editor.besser-pearl.org" target="_blank" rel="noopener">BESSER web editor</a> and there's a chat widget in the
+    bottom-right corner. Behind it is the <a href="https://github.com/BESSER-PEARL/modeling-agent" target="_blank" rel="noopener">modeling agent</a>:
+  </p>
+  <ul>
+    <li><strong>It creates and edits diagrams:</strong> class, object, state machine, agent, GUI and quantum circuit diagrams, from a sentence.</li>
+    <li><strong>It takes more than text:</strong> voice messages, and files such as PlantUML, knowledge graphs, images and PDFs, which it turns into diagrams.</li>
+    <li><strong>It runs multi-step requests:</strong> "create a library system and generate Django code" becomes a plan: model first, then generator.</li>
+    <li><strong>It writes rules too:</strong> describe a constraint in plain language and it adds it to the model as OCL.</li>
+  </ul>
+
+  <h2>Constraints make agents good</h2>
+  <p>
+    The biggest lesson from building it: an agent gets better when you give it <em>less</em> freedom, not more.
+  </p>
+  <ul>
+    <li>The language model only decides <strong>what</strong> goes in a diagram. A deterministic layout engine decides <strong>where</strong> it goes, so diagrams are tidy every time.</li>
+    <li>Its outputs are structured and validated, not free text that has to be parsed and hoped for.</li>
+    <li>It doesn't add things you didn't ask for. If you don't request a constraint, it won't invent one.</li>
+  </ul>
+  <blockquote>A demo can surprise you. A tool shouldn't.</blockquote>
+
+  <h2>An agent is just another model</h2>
+  <p>
+    This is my favourite part. In BESSER, an agent is modeled like everything else, as states, intents and transitions, and then
+    <a href="../besser-in-five-minutes/">generated</a>. The modeling agent itself is built on BESSER's own agentic framework.
+    So the same project can produce a web application <em>and</em> the agent inside it: what our
+    <a href="https://doi.org/10.1007/978-3-032-29372-5_32" target="_blank" rel="noopener">ICWE 2026 paper</a> calls smart web applications.
+  </p>
+
+  <h2>Agents everywhere</h2>
+  <p>Once you start, you see jobs for agents everywhere:</p>
+  <ul>
+    <li><strong>A spec agent</strong> for the step before the model: getting the specification right.</li>
+    <li><strong>An agent at home</strong> that runs my domotics. Same idea at a smaller scale: give it tools, let it act.</li>
+    <li><strong>This website.</strong> The hero is a small agent trace that reads a model and generates the page. See <a href="../how-this-site-was-built/">how this site was built</a>.</li>
+  </ul>
+  <p>
+    Every one of them started the same way: something I did by hand, often enough that it was worth
+    <a href="../i-build-tools/">building a tool for it</a>. Lately the tool tends to be an agent.
+  </p>
+
+
+  <div class="post-end">
+    <a href="../">← all entries</a>
+    <a href="../i-build-tools/">next: I build tools so I don&#x27;t do things twice →</a>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-left">
+      <span>Modeled by Armen, generated by an agent, built block by block. © <span data-year></span></span>
+      <button class="last-block" aria-label="The last block"></button>
+    </div>
+    <div class="secrets-wrap">
+      <button class="secrets-btn" aria-expanded="false" aria-haspopup="true">secrets <b><span data-secret-count>0</span>/<span data-secret-total>8</span></b></button>
+      <div class="secrets-pop" role="dialog" aria-label="Secrets">
+        <h4>secrets</h4>
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

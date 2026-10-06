@@ -24,7 +24,26 @@
 .hero .wrap { position: static; }
 /* canvas spans the whole hero so blocks can travel from the workbench to the name */
 .name-canvas { position: absolute; top: 0; left: 0; z-index: 3; pointer-events: none; }
-.name-stage { margin: 0 0 26px -2px; cursor: crosshair; touch-action: pan-y; }
+.hero-id {
+  display: grid;
+  grid-template-columns: clamp(104px, 28%, 164px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.name-stage { min-width: 0; cursor: crosshair; touch-action: pan-y; }
+/* portrait: rendered by the agent, sharp at rest, blocks on hover */
+.hero-portrait {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px var(--line-2), 0 0 0 5px var(--bg), 0 0 0 6px var(--line);
+  transition: opacity 0.3s;
+}
+.hero-portrait.pending { opacity: 0; }
+@media (max-width: 560px) {
+  .hero-id { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .hero-portrait { width: 96px; }
+}
 .name-fallback {
   font-size: clamp(48px, 8vw, 92px);
   line-height: 0.98;
@@ -80,6 +99,10 @@
 .uml .lbl { fill: var(--dim); font-size: 10.5px; }
 .uml .mult { fill: var(--mute); font-size: 10px; }
 .uml .arrowhead { fill: var(--model); }
+.uml .note { fill: var(--panel); stroke: var(--model); stroke-width: 1.1; }
+.uml .note-fold { fill: none; stroke: var(--model); stroke-width: 1.1; }
+.uml .dash { stroke: var(--model); stroke-width: 1.1; stroke-dasharray: 3 3; }
+.uml .note-t { font-size: 10px; }
 
 /* draw-in states (script adds .on) */
 .uml .draw { stroke-dasharray: var(--len); stroke-dashoffset: var(--len); transition: stroke-dashoffset 0.7s cubic-bezier(.6,0,.3,1), fill-opacity 0.4s 0.5s; fill-opacity: 0; }

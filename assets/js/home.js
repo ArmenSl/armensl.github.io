@@ -80,6 +80,12 @@
           }
         }
       }
+      // prune lone overshoot cells (bottom of S/u/e/a): at small sizes they read as accents
+      const key = (x, y) => x + ',' + y;
+      const filled = new Set(blocks.map(b => key(b.tx, b.ty)));
+      blocks = blocks.filter(b =>
+        [[cell, 0], [-cell, 0], [0, cell], [0, -cell]].filter(([dx, dy]) => filled.has(key(b.tx + dx, b.ty + dy))).length > 1);
+
       canvas.width = CW * dpr;
       canvas.height = CH * dpr;
       canvas.style.width = CW + 'px';
@@ -291,10 +297,13 @@
       }
     }
 
+    const portrait = $('#heroPortrait');
+
     function reset() {
       $$('.on', uml).forEach(el => el.classList.remove('on'));
       trace.innerHTML = '';
       Name.hide();
+      if (portrait) { portrait.classList.add('pending'); if (portrait._px) portrait._px.reset(); }
     }
 
     async function play() {
@@ -329,7 +338,20 @@
       on('.side.draw'); on('.link.draw');
       await sleep(320); if (!alive()) return;
       on('.side.fade'); on('.link.fade');
-      await sleep(380); if (!alive()) return;
+      await sleep(300); if (!alive()) return;
+
+      line('✓', 'check invariant · next > last');
+      on('.inv.draw');
+      await sleep(260); if (!alive()) return;
+      on('.inv.fade');
+      await sleep(300); if (!alive()) return;
+
+      if (portrait) {
+        line('✓', 'render portrait · avatar.jpg, 6 passes');
+        portrait.classList.remove('pending');
+        if (portrait._px) portrait._px.go(true, 120, skipping);
+        await sleep(700); if (!alive()) return;
+      }
 
       const gen = line('⟳', 'generate page · emitting blocks…', 'run');
       if (!Name.count()) Name.layout();
@@ -509,15 +531,15 @@
 
     function levelValue(i) { return i >= levels.length ? Infinity : levels[i]; }
 
-    function go(sharp) {
+    function go(sharp, ms = 55, instant = false) {
       clearInterval(timer);
       const target = sharp ? levels.length : 0;
-      if (reduced()) { step = target; apply(); return; }
+      if (instant || reduced()) { step = target; apply(); return; }
       timer = setInterval(() => {
         step += sharp ? 1 : -1;
         apply();
         if (step === target) clearInterval(timer);
-      }, 55);
+      }, ms);
     }
 
     function apply() {
@@ -549,11 +571,18 @@
       render(levelValue(0));
     }
 
-    el.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') go(true); });
-    el.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') go(false); });
-    el.addEventListener('focus', () => go(true));
-    el.addEventListener('blur', () => go(false));
-    el.addEventListener('click', e => { if (e.pointerType !== 'mouse') go(step < levels.length); });
+    // data-rest="sharp" (hero portrait): sharp at rest, hover shows the blocks instead
+    const rest = el.dataset.rest === 'sharp';
+    const idle = () => el.classList.contains('pending');
+    el.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse' && !idle()) go(!rest); });
+    el.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse' && !idle()) go(rest); });
+    el.addEventListener('focus', () => { if (!idle()) go(!rest); });
+    el.addEventListener('blur', () => { if (!idle()) go(rest); });
+    el.addEventListener('click', e => { if (e.pointerType !== 'mouse' && !idle()) go(step < levels.length); });
+    el._px = {
+      go,
+      reset() { clearInterval(timer); step = 0; el.classList.remove('sharp'); render(levelValue(0)); },
+    };
     document.addEventListener('themechange', () => { readPalette(); if (isSprite) render(levelValue(step)); });
     new ResizeObserver(() => { if (step < levels.length || isSprite) { if (isSprite && step === 0) setup(); else render(levelValue(step)); } }).observe(el);
 
@@ -675,6 +704,11 @@
       },
       exit() { print('there is no exit. only refactoring.'); },
       coffee() { print('☕ brewing… done. +1 mood.', 'ok'); },
+      top() {
+        print('  PID  PROCESS       %CPU');
+        [['1', 'ambition', '99.9'], ['2', 'curiosity', '87.0'], ['3', 'shipping', '74.2'], ['4', 'coffee', '42.0'], ['5', 'sleep', ' 3.1']]
+          .forEach(([pid, p, c]) => print(`  ${pid.padStart(3)}  ${p.padEnd(12)}  <span class="${pid === '1' ? 'warn' : ''}">${c}</span>`));
+      },
       hello() { print('hi! type <span class="c-agent">help</span> to see what I can do.'); },
     };
     COMMANDS.hi = COMMANDS.hello;

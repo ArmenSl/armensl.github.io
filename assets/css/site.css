@@ -472,3 +472,23 @@ footer .wrap {
 @media (max-width: 760px) {
   .secrets-pop { right: auto; left: 0; }
 }
+
+/* code blocks in posts */
+.post pre {
+  margin: 22px 0 24px;
+  padding: 16px 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--model);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.post pre code { padding: 0; border: 0; background: none; font-size: inherit; }
+.post pre .cm { color: var(--mute); }
+.post pre .kw { color: var(--model); }
+.post pre .st { color: var(--agent); }
+.post pre .fn { color: var(--out); }

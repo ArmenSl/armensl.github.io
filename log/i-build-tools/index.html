@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Generators, agent skills and release automation: the habit behind most of what I build." />
+<meta name="author" content="Armen Sulejmani" />
+<meta name="theme-color" content="#0a0f1e" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="I build tools so I don&#x27;t do things twice — Armen Sulejmani" />
+<meta property="og:description" content="Generators, agent skills and release automation: the habit behind most of what I build." />
+<meta property="og:image" content="https://armen-sulejmani.com/images/pictures/avatar.JPG" />
+<meta property="og:url" content="https://armen-sulejmani.com/log/i-build-tools/" />
+<meta property="article:published_time" content="2026-10-06" />
+<link rel="canonical" href="https://armen-sulejmani.com/log/i-build-tools/" />
+
+<title>I build tools so I don&#x27;t do things twice — Armen Sulejmani</title>
+
+<link rel="icon" type="image/svg+xml" href="../../images/icons/favicon.svg" />
+<link rel="alternate icon" type="image/x-icon" href="../../images/icons/ia.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="../../assets/css/site.css" />
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="../../assets/js/site.js" defer></script>
+</head>
+
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a href="../../" class="brand" aria-label="Armen Sulejmani, home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      armen
+    </a>
+    <div class="nav-links">
+      <a href="../../#projects">Projects</a>
+      <a href="../../#about">About</a>
+      <a href="../../#history">History</a>
+      <a href="../" aria-current="page">Log</a>
+      <a href="../../#contact">Contact</a>
+    </div>
+    <button class="icon-btn theme-btn" data-theme-toggle aria-label="Toggle light and dark theme"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+    <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<main>
+<article class="post">
+  <div class="page-head" style="padding-bottom: 0;">
+    <a class="post-back" href="../">← log</a>
+    <div class="post-meta"><time datetime="2026-10-06">Oct 6, 2026</time><span class="dot" aria-hidden="true"></span><span>3 min read</span></div>
+    <h1>I build tools so I don&#x27;t do things twice</h1>
+    <p class="dek">Generators, agent skills and release automation: the habit behind most of what I build.</p>
+  </div>
+
+  <p>
+    I have one rule I keep coming back to: <strong>if I've done something by hand twice, the third time I write a tool for it.</strong>
+    Not to save keystrokes, but to spend my time on the part only I can do.
+  </p>
+
+  <h2>Generators were the first tool</h2>
+  <p>
+    <a href="../besser-in-five-minutes/">BESSER</a> is that rule at platform scale. Nobody should write the same CRUD endpoints,
+    ORM classes and forms for the hundredth time, so you describe the model once and generators write the boilerplate.
+    Most of what I build now follows the same pattern, just smaller.
+  </p>
+
+  <h2>Teaching agents my tools</h2>
+  <p>
+    AI coding agents are only as good as what they know. So I write <strong>skills</strong> for them: packaged knowledge an agent loads
+    when a task needs it.
+  </p>
+  <ul>
+    <li><a href="https://github.com/BESSER-PEARL/BESSER-Skills" target="_blank" rel="noopener"><strong>BESSER Skills</strong></a>: give coding agents real knowledge of BESSER's metamodel, generators, troubleshooting patterns and contributor workflows, so they stop guessing at the API.</li>
+    <li><a href="https://github.com/BESSER-PEARL/uml-drawing-skill" target="_blank" rel="noopener"><strong>UML drawing</strong></a>: puts a correct UML class diagram, as a real rendered image, into your docs.</li>
+    <li><a href="https://github.com/BESSER-PEARL/agent-skills" target="_blank" rel="noopener"><strong>Research paper review</strong></a>: a systematic paper review with numerical consistency checks and venue-specific feedback. Useful before a deadline, when your own eyes stop seeing the typos.</li>
+  </ul>
+
+  <h2>Automating the maintainer job</h2>
+  <p>
+    Maintaining an open-source platform comes with a lot of repeated work, which makes it perfect for tools. For BESSER I keep the
+    operational side in its own repository: deploy scripts, a runbook, weekly stats, and a set of agent skills that handle the
+    rituals:
+  </p>
+  <ul>
+    <li><strong>Review:</strong> a deep pull-request review that fans out parallel agents, each one checking a single concern (metamodel, generators, frontend, tests, docs, security) against BESSER's actual patterns.</li>
+    <li><strong>Open a PR:</strong> drafts the title and description from the diff, runs the review as a gate, and refuses to continue when public code changed without matching docs.</li>
+    <li><strong>Release:</strong> the full cross-repository sequence, from frontend and backend through version bump, release notes and tag to the production deploy, as one repeatable procedure instead of a checklist in my head.</li>
+  </ul>
+  <p>
+    The release one is the best example of the rule. A release has many steps across two repositories, and every manual step is a
+    chance to forget one. Now it's written down once and runs the same way every time.
+  </p>
+
+  <h2>Tools from today</h2>
+  <p>
+    Even this website produced one. While it was being rebuilt (<a href="../how-this-site-was-built/">how this site was built</a>), the
+    process turned into a reusable skill: finding a personal metaphor, the build recipes, and a small script that drives a headless
+    browser to screenshot every page and catch console errors. Next time, it starts from there.
+  </p>
+
+  <h2>Inventing is mostly noticing</h2>
+  <p>
+    Most of my tools didn't start as ideas. They started as small hacks to get my own work done faster, and became tools once someone
+    else needed the same thing. The trick is noticing the second time you do something, and not waiting for the tenth.
+  </p>
+
+
+  <div class="post-end">
+    <a href="../">← all entries</a>
+    <a href="../how-this-site-was-built/">next: How this site was built →</a>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-left">
+      <span>Modeled by Armen, generated by an agent, built block by block. © <span data-year></span></span>
+      <button class="last-block" aria-label="The last block"></button>
+    </div>
+    <div class="secrets-wrap">
+      <button class="secrets-btn" aria-expanded="false" aria-haspopup="true">secrets <b><span data-secret-count>0</span>/<span data-secret-total>8</span></b></button>
+      <div class="secrets-pop" role="dialog" aria-label="Secrets">
+        <h4>secrets</h4>
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

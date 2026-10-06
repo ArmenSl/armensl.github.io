@@ -61,9 +61,14 @@
         <span>armen.buml</span><span class="arrow">→ agent →</span><span>armen-sulejmani.com</span>
       </div>
 
-      <div class="name-stage" id="nameStage">
-        <h1 class="name-fallback">Armen Sulejmani</h1>
-        <canvas class="name-canvas" id="nameCanvas" aria-hidden="true"></canvas>
+      <div class="hero-id">
+        <div class="px hero-portrait pending" id="heroPortrait" data-src="images/pictures/avatar.JPG" data-crop="180,170,420" data-levels="6,10,16,26,40,64" data-rest="sharp" tabindex="0" aria-label="Portrait of Armen Sulejmani">
+          <img src="images/pictures/avatar.JPG" alt="Portrait of Armen Sulejmani" style="transform: scale(1.905); transform-origin: 47.4% 44.7%;" />
+        </div>
+        <div class="name-stage" id="nameStage">
+          <h1 class="name-fallback">Armen Sulejmani</h1>
+          <canvas class="name-canvas" id="nameCanvas" aria-hidden="true"></canvas>
+        </div>
       </div>
 
       <p class="hero-lede">
@@ -96,7 +101,7 @@
 
       <div class="uml-wrap">
         <svg class="uml" id="uml" viewBox="0 0 420 224" role="img" aria-labelledby="umlTitle">
-          <title id="umlTitle">UML class diagram: class Armen, a Research Engineer based in Luxembourg, uses class Agent and leads class BESSER.</title>
+          <title id="umlTitle">UML class diagram: class Armen, a Research Engineer based in Luxembourg, uses class Agent and leads class BESSER, with the constraint next &gt; last.</title>
 
           <!-- class Armen -->
           <g class="hit" id="umlArmen">
@@ -124,6 +129,12 @@
           <text class="stereo fade side" x="360" y="162" text-anchor="middle">«platform»</text>
           <text class="cname-sm fade side" x="360" y="181" text-anchor="middle">BESSER</text>
           <line class="sep draw side" x1="310" y1="192" x2="410" y2="192" style="--len:100" />
+
+          <!-- constraint note: every version better than the last -->
+          <path class="note draw inv" d="M300,96 H402 L410,104 V128 H300 Z" style="--len:280" />
+          <path class="note-fold fade inv" d="M402,96 V104 H410" />
+          <line class="dash fade inv" x1="262" y1="112" x2="300" y2="112" />
+          <text class="note-t fade inv" x="305" y="116"><tspan class="vis">inv:</tspan> next &gt; last</text>
 
           <!-- associations -->
           <line class="assoc draw link" x1="262" y1="51" x2="309" y2="51" style="--len:47" />
@@ -262,6 +273,7 @@
             <div><dt>level</dt><dd>3+ years of research-grade software</dd></div>
             <div><dt>speaks</dt><dd>French, English, Serbo-Croatian, Luxembourgish</dd></div>
             <div><dt>inventory</dt><dd>[BESSER, CLIMABOROUGH, 6G-TWIN]</dd></div>
+            <div><dt>difficulty</dt><dd>hard, by choice</dd></div>
             <div><dt>special move</dt><dd><span class="q">"</span>Turns a whiteboard sketch into a running app before the meeting ends.<span class="q">"</span></dd></div>
             <div class="mood" id="objMood" hidden><dt>mood</dt><dd>caffeinated ☕</dd></div>
           </dl>
@@ -498,12 +510,36 @@
 <section id="log">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-tag">06 — Entry[1]</span>
+      <span class="sec-tag">06 — Entry[4]</span>
       <h2>Log.</h2>
       <p>Notes on building things. <a class="c-model" href="log/">All entries →</a></p>
     </div>
 
     <div class="log-list">
+      <a class="log-item reveal" href="log/besser-in-five-minutes/">
+        <div class="log-meta">Oct 6, 2026 · 4 min</div>
+        <div>
+          <h3>BESSER in five minutes</h3>
+          <p>What an open-source low-code platform actually does, and why the model is the source of truth.</p>
+        </div>
+        <span class="log-read">Read →</span>
+      </a>
+      <a class="log-item reveal" href="log/why-i-love-building-agents/">
+        <div class="log-meta">Oct 6, 2026 · 3 min</div>
+        <div>
+          <h3>Why I love building agents</h3>
+          <p>Software that doesn't just answer, it acts. From a modeling assistant to my home.</p>
+        </div>
+        <span class="log-read">Read →</span>
+      </a>
+      <a class="log-item reveal" href="log/i-build-tools/">
+        <div class="log-meta">Oct 6, 2026 · 3 min</div>
+        <div>
+          <h3>I build tools so I don't do things twice</h3>
+          <p>Generators, agent skills and release automation: the habit behind most of what I build.</p>
+        </div>
+        <span class="log-read">Read →</span>
+      </a>
       <a class="log-item reveal" href="log/how-this-site-was-built/">
         <div class="log-meta">Oct 6, 2026 · 5 min</div>
         <div>

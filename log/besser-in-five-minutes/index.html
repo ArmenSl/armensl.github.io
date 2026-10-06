@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="What an open-source low-code platform actually does, and why the model is the source of truth." />
+<meta name="author" content="Armen Sulejmani" />
+<meta name="theme-color" content="#0a0f1e" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="BESSER in five minutes — Armen Sulejmani" />
+<meta property="og:description" content="What an open-source low-code platform actually does, and why the model is the source of truth." />
+<meta property="og:image" content="https://armen-sulejmani.com/images/pictures/avatar.JPG" />
+<meta property="og:url" content="https://armen-sulejmani.com/log/besser-in-five-minutes/" />
+<meta property="article:published_time" content="2026-10-06" />
+<link rel="canonical" href="https://armen-sulejmani.com/log/besser-in-five-minutes/" />
+
+<title>BESSER in five minutes — Armen Sulejmani</title>
+
+<link rel="icon" type="image/svg+xml" href="../../images/icons/favicon.svg" />
+<link rel="alternate icon" type="image/x-icon" href="../../images/icons/ia.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="../../assets/css/site.css" />
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="../../assets/js/site.js" defer></script>
+</head>
+
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a href="../../" class="brand" aria-label="Armen Sulejmani, home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      armen
+    </a>
+    <div class="nav-links">
+      <a href="../../#projects">Projects</a>
+      <a href="../../#about">About</a>
+      <a href="../../#history">History</a>
+      <a href="../" aria-current="page">Log</a>
+      <a href="../../#contact">Contact</a>
+    </div>
+    <button class="icon-btn theme-btn" data-theme-toggle aria-label="Toggle light and dark theme"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+    <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<main>
+<article class="post">
+  <div class="page-head" style="padding-bottom: 0;">
+    <a class="post-back" href="../">← log</a>
+    <div class="post-meta"><time datetime="2026-10-06">Oct 6, 2026</time><span class="dot" aria-hidden="true"></span><span>4 min read</span></div>
+    <h1>BESSER in five minutes</h1>
+    <p class="dek">What an open-source low-code platform actually does, and why the model is the source of truth.</p>
+  </div>
+
+  <p>
+    <a href="https://github.com/BESSER-PEARL/BESSER" target="_blank" rel="noopener">BESSER</a> is the open-source low-code
+    platform I lead at the Luxembourg Institute of Science and Technology. This is the five-minute version of what it does
+    and why it's built the way it is.
+  </p>
+
+  <h2>The problem with low-code</h2>
+  <p>
+    Low-code means writing less code by hand. You describe the application as <strong>models</strong>, and
+    <strong>generators</strong> turn those models into working code. It's a good idea, but most low-code platforms are
+    commercial. That brings vendor lock-in, limited extensibility, and generators you can't look inside.
+  </p>
+  <p>
+    BESSER takes the same idea and makes it open: you can read every generator, extend it, or write your own.
+  </p>
+
+  <h2>Model first</h2>
+  <p>
+    Models in BESSER are written in <strong>B-UML</strong>, a simplified, Python-based take on UML. Here's a tiny one:
+    a city that tracks climate indicators.
+  </p>
+<pre><code><span class="kw">from</span> besser.BUML.metamodel.structural <span class="kw">import</span> (
+    DomainModel, Class, Property, Multiplicity,
+    BinaryAssociation, StringType, IntegerType,
+)
+
+<span class="cm"># classes and their attributes</span>
+city = <span class="fn">Class</span>(name=<span class="st">"City"</span>, attributes={<span class="fn">Property</span>(name=<span class="st">"name"</span>, type=StringType)})
+indicator = <span class="fn">Class</span>(name=<span class="st">"Indicator"</span>, attributes={
+    <span class="fn">Property</span>(name=<span class="st">"name"</span>, type=StringType),
+    <span class="fn">Property</span>(name=<span class="st">"target"</span>, type=IntegerType),
+})
+
+<span class="cm"># a city tracks many indicators; each indicator belongs to one city</span>
+tracks = <span class="fn">Property</span>(name=<span class="st">"indicators"</span>, type=indicator, multiplicity=<span class="fn">Multiplicity</span>(<span class="st">0</span>, <span class="st">"*"</span>))
+owner  = <span class="fn">Property</span>(name=<span class="st">"city"</span>, type=city, multiplicity=<span class="fn">Multiplicity</span>(<span class="st">1</span>, <span class="st">1</span>))
+city_indicators = <span class="fn">BinaryAssociation</span>(name=<span class="st">"city_indicators"</span>, ends={tracks, owner})
+
+model = <span class="fn">DomainModel</span>(name=<span class="st">"Climate"</span>, types={city, indicator}, associations={city_indicators})
+<span class="kw">assert</span> model.<span class="fn">validate</span>()[<span class="st">"success"</span>]</code></pre>
+  <p>
+    <code>validate()</code> checks the model before anything gets generated, so mistakes surface in the model, where they're cheap to fix.
+  </p>
+
+  <h2>One model, many targets</h2>
+  <p>The same model feeds many generators. A REST API is three lines:</p>
+<pre><code><span class="kw">from</span> besser.generators.backend <span class="kw">import</span> BackendGenerator
+
+<span class="fn">BackendGenerator</span>(model=model, output_dir=<span class="st">"./api"</span>).<span class="fn">generate</span>()
+<span class="cm"># → FastAPI endpoints + SQLAlchemy ORM + Pydantic models</span></code></pre>
+  <p>
+    Other generators produce Python, Java or Pydantic classes, SQL, Django projects, full-stack React + FastAPI web apps,
+    Flutter apps, conversational agents, and Terraform for deployment.
+  </p>
+  <blockquote>Regenerating overwrites the output, on purpose. The model is the source of truth: change the model, not the generated code.</blockquote>
+
+  <h2>No Python required</h2>
+  <p>
+    Not everyone wants to write models in Python. The <a href="https://editor.besser-pearl.org" target="_blank" rel="noopener">web editor</a>
+    lets you draw class diagrams, state machines, GUIs and deployment models, then click <em>Generate</em> and download the code.
+    It runs the same generators as the Python API, and it can import a B-UML <code>.py</code> file, so the two ways of working connect.
+  </p>
+
+  <h2>Rules belong in the model</h2>
+  <p>
+    Some rules don't fit in a diagram: "an indicator's target can't be negative". UML has a language for that, OCL:
+  </p>
+<pre><code><span class="kw">context</span> Indicator <span class="kw">inv</span> positive_target: <span class="kw">self</span>.target &gt;= <span class="st">0</span></code></pre>
+  <p>
+    <strong>B-OCL</strong>, the parser and interpreter we built for BESSER (<a href="https://doi.org/10.1145/3837062.3839071" target="_blank" rel="noopener">paper</a>),
+    reads constraints like this one and checks them, so the rules live next to the model instead of being scattered through the code.
+  </p>
+
+  <h2>Try it</h2>
+  <pre><code>pip install besser   <span class="cm"># Python 3.11+</span></code></pre>
+  <ul>
+    <li><a href="https://github.com/BESSER-PEARL/BESSER" target="_blank" rel="noopener">BESSER on GitHub</a></li>
+    <li><a href="https://besser.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Documentation</a></li>
+    <li><a href="https://editor.besser-pearl.org" target="_blank" rel="noopener">Web editor</a></li>
+    <li>Papers: <a href="https://doi.org/10.1007/978-3-031-61007-3_16" target="_blank" rel="noopener">Building BESSER</a> (EMMSAD 2024) and <a href="https://doi.org/10.1007/978-3-032-29372-5_32" target="_blank" rel="noopener">Low-Code and No-Code with BESSER</a> (ICWE 2026)</li>
+  </ul>
+
+
+  <div class="post-end">
+    <a href="../">← all entries</a>
+    <a href="../why-i-love-building-agents/">next: Why I love building agents →</a>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-left">
+      <span>Modeled by Armen, generated by an agent, built block by block. © <span data-year></span></span>
+      <button class="last-block" aria-label="The last block"></button>
+    </div>
+    <div class="secrets-wrap">
+      <button class="secrets-btn" aria-expanded="false" aria-haspopup="true">secrets <b><span data-secret-count>0</span>/<span data-secret-total>8</span></b></button>
+      <div class="secrets-pop" role="dialog" aria-label="Secrets">
+        <h4>secrets</h4>
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
