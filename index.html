@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Armen Sulejmani — Research Engineer & Software Engineer at the Luxembourg Institute of Science and Technology. Lead developer of BESSER, an open-source low-code platform. Model-driven engineering, applied AI and AI agents." />
+<meta name="description" content="Armen Sulejmani — Research Engineer & Software Engineer at the Luxembourg Institute of Science and Technology. Main engineer of BESSER, an open-source low-code platform. Model-driven engineering, applied AI and AI agents." />
 <meta name="author" content="Armen Sulejmani" />
 <meta name="theme-color" content="#0a0f1e" />
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Armen Sulejmani — Research & Software Engineer" />
-<meta property="og:description" content="Research Engineer at LIST · Lead developer of BESSER, an open-source low-code platform · Model-driven engineering, applied AI & AI agents." />
+<meta property="og:description" content="Research Engineer at LIST · Main engineer of BESSER, an open-source low-code platform · Model-driven engineering, applied AI & AI agents." />
 <meta property="og:image" content="https://armen-sulejmani.com/images/pictures/avatar.JPG" />
 <meta property="og:url" content="https://armen-sulejmani.com/" />
 <link rel="canonical" href="https://armen-sulejmani.com/" />
@@ -40,6 +40,7 @@
     </a>
     <div class="nav-links">
       <a href="#projects">Projects</a>
+      <a href="#impact">What I do</a>
       <a href="#about">About</a>
       <a href="#history">History</a>
       <a href="#publications">Papers</a>
@@ -72,9 +73,9 @@
       </div>
 
       <p class="hero-lede">
-        Research &amp; Software Engineer at the <strong>Luxembourg Institute of Science and Technology</strong>.
-        I lead development of <strong>BESSER</strong>, an open-source low-code platform, and work where
-        <strong>model-driven engineering</strong>, <strong>applied AI</strong> and <strong>AI agents</strong> meet.
+        Software engineer at the <strong>Luxembourg Institute of Science and Technology</strong>, working across
+        <strong>AI agents</strong>, <strong>full-stack platforms</strong>, <strong>code generation</strong> and <strong>machine learning</strong>.
+        I am the main engineer of BESSER, an open-source low-code platform.
       </p>
 
       <div class="hero-actions">
@@ -162,7 +163,7 @@
 <section id="projects">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-tag">01 — Project[4]</span>
+      <span class="sec-tag">01 — Project[6]</span>
       <h2>Selected work.</h2>
       <p>Open-source platforms and applied research I've built or contributed to. Covers start as blocks and render on hover.</p>
     </div>
@@ -174,16 +175,54 @@
           <span class="px-hint">hover to render</span>
         </div>
         <div class="body">
-          <div class="stereo">«platform» · lead developer</div>
+          <div class="stereo">«platform» · main engineer</div>
           <h3>BESSER</h3>
           <p>
             An open-source <strong>low-code / low-modeling platform</strong> built on B-UML, a Python-based, simplified take on UML.
             Developed at LIST under an <strong>FNR PEARL</strong> program to build better smart software, faster.
-            I drive the technical roadmap, architecture and open-source releases.
+            With a small team, I lead the architecture and run the releases.
           </p>
           <div class="links">
             <a href="https://github.com/BESSER-PEARL/BESSER" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
             <a href="https://besser.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener"><i class="fa-solid fa-book"></i> Docs</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project panel reveal">
+        <div class="px" data-sprite="agent" tabindex="0" aria-label="Pixel-art robot">
+          <span class="px-hint">hover to render</span>
+        </div>
+        <div class="body">
+          <div class="stereo">«agent» · main author</div>
+          <h3>Spec-Driven Agent</h3>
+          <p>
+            Generates an application from a reviewed model and written requirements, then <strong>validates and repairs</strong> it within a cost budget.
+            When the model changes, a <strong>three-way merge</strong> keeps hand edits: the share of recorded changes needing no manual fix went from 31% to 78%.
+            Live in the BESSER editor.
+          </p>
+          <div class="links">
+            <a href="https://github.com/BESSER-PEARL/BESSER/tree/master/besser/spec_driven_agent" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+            <a href="https://editor.besser-pearl.org" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> Try it</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project panel reveal">
+        <div class="px" data-src="images/portfolio/trade-lens.png" data-fit="contain" data-bg="#ffffff" tabindex="0" aria-label="Trade Lens class diagram">
+          <img src="images/portfolio/trade-lens.png" alt="Trade Lens class diagram" loading="lazy" />
+          <span class="px-hint">hover to render</span>
+        </div>
+        <div class="body">
+          <div class="stereo">«multi-agent» · STATEC Hackathon 2026</div>
+          <h3>Trade Lens</h3>
+          <p>
+            <strong>Four AI agents</strong> explain Luxembourg's external trade in goods on official Eurostat data.
+            The dashboard is generated with BESSER from a class diagram imported automatically from the SDMX description of the data. Built by team BESSER at the hackathon, and live.
+          </p>
+          <div class="links">
+            <a href="https://trade-lens.besser-pearl.org" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> Live app</a>
+            <a href="https://github.com/BESSER-PEARL/Trade-Lens" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
           </div>
         </div>
       </article>
@@ -197,7 +236,7 @@
           <div class="stereo">«eu-horizon» · smart cities</div>
           <h3>CLIMABOROUGH</h3>
           <p>
-            <strong>EU Horizon</strong> project (€11.4M, ≈ €11M EU contribution) co-funded by the EU and CINEA, bridging the gap between the design and
+            <strong>EU Horizon</strong> project (€11.4M, ≈ €11M EU contribution) funded by the EU through CINEA, bridging the gap between the design and
             implementation of urban innovations under climate change. I use BESSER to build smart dashboards for
             real-time urban-data monitoring and analysis.
           </p>
@@ -248,11 +287,73 @@
   </div>
 </section>
 
+<!-- ============ IMPACT ============ -->
+<section id="impact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">02 — Domain[6]</span>
+      <h2>What I work on.</h2>
+      <p>The range of it, from research to production.</p>
+    </div>
+
+    <div class="belt impact">
+      <div class="panel reveal">
+        <h3>agents &amp; LLMs</h3>
+        <ul>
+          <li>An agent that turns a model and written requirements into an application, then validates and repairs it within a cost budget.</li>
+          <li>A conversational modeling assistant with LLM routing, orchestration, RAG, voice and file input.</li>
+          <li>Multi-provider LLM layer, prompt caching, cost control and self-hosted models.</li>
+        </ul>
+      </div>
+      <div class="panel reveal">
+        <h3>platforms &amp; generators</h3>
+        <ul>
+          <li>Metamodels and code generators for FastAPI, React, Django, Terraform and Qiskit.</li>
+          <li>A browser-based modeling editor in React and TypeScript, with its Python backend.</li>
+          <li>Agent skills that help coding agents work with the platform.</li>
+        </ul>
+      </div>
+      <div class="panel reveal">
+        <h3>algorithms &amp; performance</h3>
+        <ul>
+          <li>A three-way merge that keeps hand edits when a model changes.</li>
+          <li>Best-bound-first pruning that made similar-code search 35x faster with the same results.</li>
+          <li>Profiling and render fixes on the diagram canvas, and an OCL normalization pipeline.</li>
+        </ul>
+      </div>
+      <div class="panel reveal">
+        <h3>applied systems</h3>
+        <ul>
+          <li>Smart-city dashboards for the EU project Climaborough, through to production releases.</li>
+          <li>Trade Lens, built with team BESSER: AI agents explaining Luxembourg's trade on official data.</li>
+          <li>Earlier: GIS applications with ESRI for France's national forest office.</li>
+        </ul>
+      </div>
+      <div class="panel reveal">
+        <h3>machine learning &amp; research</h3>
+        <ul>
+          <li>Interpretability research: local and global rules from black-box models, and β-VAEs.</li>
+          <li>Partial LTL model checking in Python and C++.</li>
+          <li>Six co-authored papers, including an ECSA Tools and Demos Paper Award.</li>
+        </ul>
+      </div>
+      <div class="panel reveal">
+        <h3>practice &amp; people</h3>
+        <ul>
+          <li>Release management, CI, security hardening, and Docker and AWS deployments.</li>
+          <li>Shaping the roadmap with the project lead, code review, and supervising interns.</li>
+          <li>Led the hands-on BESSER workshop at the Open Source Conference Luxembourg 2026.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ ABOUT ============ -->
 <section id="about">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-tag">02 — armen : Engineer</span>
+      <span class="sec-tag">03 — armen : Engineer</span>
       <h2>An instance of the model.</h2>
       <p>The class is up top. This is the object, with real values filled in.</p>
     </div>
@@ -270,9 +371,9 @@
           <dl class="obj-attrs">
             <div><dt>class</dt><dd>Research &amp; Software Engineer</dd></div>
             <div><dt>guild</dt><dd>LIST · Luxembourg</dd></div>
-            <div><dt>level</dt><dd>3+ years of research-grade software</dd></div>
+            <div><dt>level</dt><dd>main engineer of BESSER</dd></div>
             <div><dt>speaks</dt><dd>French, English, Serbo-Croatian, Luxembourgish</dd></div>
-            <div><dt>inventory</dt><dd>[BESSER, CLIMABOROUGH, 6G-TWIN]</dd></div>
+            <div><dt>inventory</dt><dd>[BESSER, Spec-Driven Agent, Trade Lens, CLIMABOROUGH, 6G-TWIN]</dd></div>
             <div><dt>difficulty</dt><dd>hard, by choice</dd></div>
             <div><dt>special move</dt><dd><span class="q">"</span>Turns a whiteboard sketch into a running app before the meeting ends.<span class="q">"</span></dd></div>
             <div class="mood" id="objMood" hidden><dt>mood</dt><dd>caffeinated ☕</dd></div>
@@ -288,8 +389,8 @@
         </p>
         <p>
           My work sits where research meets production: turning ideas from <strong>machine learning</strong>, <strong>formal methods</strong>
-          and <strong>model-driven engineering</strong> into tools people actually use. As <strong>lead developer</strong> of
-          <strong>BESSER</strong>, I drive the architectural roadmap, work alongside a small team, and keep the platform open, pragmatic and useful.
+          and <strong>model-driven engineering</strong> into tools people actually use. As <strong>main engineer</strong> of
+          <strong>BESSER</strong>, I lead the architecture and run the releases with a small team, and build the AI agents that turn its models into running applications.
         </p>
         <p>
           I like clean code, small interfaces, and writing for humans first. When I'm not shipping, I'm probably reading a paper,
@@ -297,10 +398,10 @@
         </p>
 
         <div class="stats">
-          <div class="stat panel"><div class="num">3+</div><div class="lbl">years building research software</div></div>
-          <div class="stat panel"><div class="num">5</div><div class="lbl">publications</div></div>
+          <div class="stat panel"><div class="num">4</div><div class="lbl">languages spoken</div></div>
+          <div class="stat panel"><div class="num">6</div><div class="lbl">publications</div></div>
           <div class="stat panel"><div class="num">2</div><div class="lbl">EU Horizon projects</div></div>
-          <div class="stat panel"><div class="num">1</div><div class="lbl">open-source platform led</div></div>
+          <div class="stat panel"><div class="num">1</div><div class="lbl">paper award (ECSA)</div></div>
         </div>
       </div>
     </div>
@@ -311,7 +412,7 @@
 <section id="history">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-tag">03 — Event[6]</span>
+      <span class="sec-tag">04 — Event[6]</span>
       <h2>Where I've worked and studied.</h2>
       <p>From research labs in Paris to applied AI in Luxembourg.</p>
     </div>
@@ -324,15 +425,15 @@
           <div class="tl-mark" aria-hidden="true"></div>
           <div class="tl-card panel">
             <h4>Research Engineer &amp; Software Engineer</h4>
-            <div class="org">LIST · lead developer, BESSER</div>
+            <div class="org">LIST · main engineer, BESSER</div>
             <p>
-              Leading development of <strong>BESSER</strong>, an open-source low-code / low-modeling platform: architectural design,
-              technical roadmap, and integration of generative-AI capabilities. Contributing to two EU Horizon projects:
+              Main engineer of <strong>BESSER</strong>, an open-source low-code platform, working with a small team across its architecture, generators, web editor,
+              AI agents and releases. I also review contributors' work and supervise interns. Contributing to two EU Horizon projects:
               <strong>CLIMABOROUGH</strong>, with smart-city dashboards for real-time urban data, and <strong>6G-TWIN</strong>, integrating
               network digital twins into AI-driven 6G systems.
             </p>
             <div class="tags">
-              <span class="tag">Python</span><span class="tag">Low-Code / MDE</span><span class="tag">GenAI</span><span class="tag">AI agents</span>
+              <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">Low-Code / MDE</span><span class="tag">AI agents</span><span class="tag">LLM cost &amp; caching</span><span class="tag">Performance</span><span class="tag">Release management</span>
               <span class="tag">Cloud deployment</span><span class="tag">Smart cities</span><span class="tag">6G / digital twins</span>
             </div>
           </div>
@@ -416,12 +517,20 @@
 <section id="publications">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-tag">04 — Paper[5]</span>
+      <span class="sec-tag">05 — Paper[6]</span>
       <h2>Peer-reviewed work.</h2>
       <p>Low-code, model-driven engineering and the tools around them. If you'd like a preprint, send me a note.</p>
     </div>
 
     <div class="pubs">
+      <div class="pub panel reveal">
+        <div class="yr">2026</div>
+        <div>
+          <h4>BESSER-NN: Visual Neural Network Design and Automated Code Generation with the BESSER Low-Code Platform</h4>
+          <div class="authors">Nadia Daoudi, <strong>Armen Sulejmani</strong>, Jordi Cabot</div>
+          <div class="venue">International Conference on Automated Software Engineering (ASE) 2026</div>
+        </div>
+      </div>
       <div class="pub panel reveal">
         <div class="yr">2026</div>
         <div>
@@ -454,7 +563,7 @@
         <div>
           <h4>Extending a Low-Code Tool with Multi-cloud Deployment Capabilities</h4>
           <div class="authors">Fitash Ul Haq, Iván Alfonso, <strong>Armen Sulejmani</strong>, Jordi Cabot</div>
-          <div class="venue">European Conference on Software Architecture (ECSA) 2024</div>
+          <div class="venue">European Conference on Software Architecture (ECSA) 2024 · <strong>Tools and Demos Paper Award</strong></div>
           <a class="doi" href="https://doi.org/10.1007/978-3-031-71246-3_5" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> 10.1007/978-3-031-71246-3_5</a>
         </div>
       </div>
@@ -475,7 +584,7 @@
 <section id="toolbelt">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-tag">05 — Skill[*]</span>
+      <span class="sec-tag">06 — Skill[*]</span>
       <h2>The blocks I build with.</h2>
       <p>The stack I reach for and the domains I work in.</p>
     </div>
@@ -491,14 +600,14 @@
       <div class="panel reveal">
         <h3>frameworks &amp; infra</h3>
         <div class="blocks">
-          <span>Node.js</span><span>React</span><span>Docker</span><span>Linux</span><span>Git</span><span>AWS</span><span>Azure</span>
+          <span>FastAPI</span><span>Django</span><span>React</span><span>Node.js</span><span>PyTorch</span><span>TensorFlow</span><span>Qiskit</span><span>Docker</span><span>Terraform</span><span>nginx</span><span>GitHub Actions</span><span>Linux</span><span>AWS</span><span>Azure</span>
         </div>
       </div>
       <div class="panel reveal">
         <h3>domains</h3>
         <div class="blocks">
-          <span>Model-driven engineering</span><span>Low-code platforms</span><span>LLM integration</span><span>AI agents</span>
-          <span>Network digital twins</span><span>Smart cities</span><span>Interpretable ML</span><span>Formal methods</span>
+          <span>AI agents</span><span>LLM integration</span><span>Model-driven engineering</span><span>Low-code platforms</span><span>Algorithms</span><span>Performance profiling</span>
+          <span>Quantum software</span><span>GIS</span><span>Network digital twins</span><span>Smart cities</span><span>Interpretable ML</span><span>Formal methods</span>
           <span>Multi-cloud</span><span>API design</span><span>Open source</span>
         </div>
       </div>
@@ -510,7 +619,7 @@
 <section id="log">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-tag">06 — Entry[4]</span>
+      <span class="sec-tag">07 — Entry[4]</span>
       <h2>Log.</h2>
       <p>Notes on building things. <a class="c-model" href="log/">All entries →</a></p>
     </div>
@@ -556,7 +665,7 @@
 <section id="contact">
   <div class="wrap contact-grid">
     <div class="contact-copy reveal">
-      <span class="sec-tag">07 — Message</span>
+      <span class="sec-tag">08 — Message</span>
       <div class="sec-head" style="margin-bottom: 20px;">
         <h2>Let's build something good.</h2>
       </div>

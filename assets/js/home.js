@@ -389,6 +389,24 @@
      Pixelated media — covers start at 8px blocks, render on hover
      ========================================================= */
   const SPRITES = {
+    agent: [
+      '........o........',
+      '........#........',
+      '...###########...',
+      '...#.........#...',
+      '...#..1...1..#...',
+      '...#..1...1..#...',
+      '.#.#.........#.#.',
+      '.#.#..mmmmm..#.#.',
+      '.#.#.........#.#.',
+      '...###########...',
+      '......#...#......',
+      '....#########....',
+      '....#.2.2.2.#....',
+      '....#########....',
+      '.....##...##.....',
+      '.....##...##.....',
+    ],
     tower: [
       '..3...........3..',
       '.3..2.......2..3.',
@@ -535,6 +553,7 @@
       clearInterval(timer);
       const target = sharp ? levels.length : 0;
       if (instant || reduced()) { step = target; apply(); return; }
+      if (step === target) { apply(); return; }
       timer = setInterval(() => {
         step += sharp ? 1 : -1;
         apply();
@@ -657,7 +676,7 @@
       whoami() { print('guest. could be a collaborator, though.'); },
       about() {
         print('Armen Sulejmani · Research &amp; Software Engineer @ LIST, Luxembourg');
-        print('lead developer of BESSER, an open-source low-code platform');
+        print('main engineer of BESSER, an open-source low-code platform');
         print('model-driven engineering · applied AI · AI agents');
       },
       projects() {

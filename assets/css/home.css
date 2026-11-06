@@ -324,3 +324,9 @@
 }
 .term-chips button:hover { color: var(--ink); border-color: var(--agent); }
 @media (max-width: 600px) { .term-out { --h: 240px; } }
+
+/* ---------- impact ---------- */
+.impact ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.impact li { color: var(--dim); font-size: 14.5px; line-height: 1.5; padding-left: 14px; position: relative; }
+.impact li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; background: var(--out); }
+.impact li strong { color: var(--ink); font-weight: 600; }
